@@ -57,12 +57,12 @@
 
 .chatbot-window {
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   right: 30px;
   width: 380px;
   max-width: calc(100vw - 40px);
-  height: 550px;
-  max-height: calc(100vh - 150px);
+  height: 480px;
+  max-height: calc(100vh - 200px);
   background: var(--card);
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
@@ -393,13 +393,13 @@ body.light .chatbot-input {
   }
   
   .chatbot-window {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100vh - 90px);
-    max-height: calc(100vh - 90px);
-    border-radius: 20px 20px 0 0;
+    bottom: 90px;
+    right: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 50vh;
+    max-height: 420px;
+    border-radius: 20px;
   }
   
   .chatbot-header {
@@ -443,9 +443,13 @@ body.light .chatbot-input {
 
 @media (max-width: 480px) {
   .chatbot-window {
-    height: 100vh;
-    max-height: 100vh;
-    border-radius: 0;
+    bottom: 90px;
+    right: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 55vh;
+    max-height: 450px;
+    border-radius: 16px;
   }
   
   .chatbot-header {
