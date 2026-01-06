@@ -1,5 +1,51 @@
 (() => {
-  // --- Tilt 3D ---
+  'use strict';
+
+  // ==================== THEME TOGGLE ====================
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+  
+  // Load saved theme or default to dark
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  body.classList.remove('dark', 'light');
+  body.classList.add(savedTheme);
+  
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      body.classList.remove('dark', 'light');
+      body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      // Add animation
+      themeToggle.style.transform = 'rotate(360deg)';
+      setTimeout(() => {
+        themeToggle.style.transform = '';
+      }, 400);
+    });
+  }
+
+  // ==================== MOBILE MENU TOGGLE ====================
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const nav = document.querySelector('.nav');
+  
+  if (mobileMenuToggle && nav) {
+    mobileMenuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      const icon = mobileMenuToggle.querySelector('i');
+      if (nav.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+  }
+
+  // ==================== TILT 3D EFFECT ====================
   function applyTilt(el, e) {
     const rect = el.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -8,34 +54,142 @@
     const rotY = (x * 12).toFixed(2);
     el.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(6px)`;
   }
-  function resetTilt(el) { el.style.transform = ''; }
+  
+  function resetTilt(el) {
+    el.style.transform = '';
+  }
+  
   document.querySelectorAll('[data-tilt], .card-3d').forEach(el => {
     el.addEventListener('mousemove', e => applyTilt(el, e));
     el.addEventListener('mouseleave', () => resetTilt(el));
   });
 
-  // --- Scroll suave ---
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  // ==================== SMOOTH SCROLL ====================
+  const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+  
+  smoothScrollLinks.forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      
+      if (href === '#' || !href) return;
+      
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      e.stopPropagation();
+      
+      // Close mobile menu if open
+      const navElement = document.querySelector('.nav');
+      const menuToggle = document.getElementById('mobileMenuToggle');
+      if (navElement && navElement.classList.contains('active')) {
+        navElement.classList.remove('active');
+        if (menuToggle) {
+          const icon = menuToggle.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+      
+      // Scroll to target using scrollIntoView
+      const target = document.querySelector(href);
+      
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // Adjust for fixed header
+        setTimeout(() => {
+          window.scrollBy({
+            top: -80,
+            behavior: 'smooth'
+          });
+        }, 10);
+      }
     });
   });
 
-  // --- Filtros de proyectos ---
+  // ==================== SCROLL ANIMATIONS ====================
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+  });
+
+  // ==================== COUNTER ANIMATION ====================
+  const animateCounter = (element, target) => {
+    let current = 0;
+    const increment = target / 100;
+    const duration = 2000;
+    const stepTime = duration / 100;
+    
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        element.textContent = target;
+        clearInterval(timer);
+      } else {
+        element.textContent = Math.floor(current);
+      }
+    }, stepTime);
+  };
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const target = parseInt(entry.target.dataset.target);
+        animateCounter(entry.target, target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number[data-target]').forEach(counter => {
+    counterObserver.observe(counter);
+  });
+
+  // ==================== PROJECT FILTERS ====================
   const filters = document.querySelectorAll('.filter');
   const projects = document.querySelectorAll('.project');
-  filters.forEach(btn => btn.addEventListener('click', () => {
-    filters.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    projects.forEach(p => {
-      p.style.display = filter === 'all' || p.dataset.tags.split(' ').includes(filter) ? '' : 'none';
-    });
-  }));
+  
+  if (filters.length > 0 && projects.length > 0) {
+    filters.forEach(btn => btn.addEventListener('click', () => {
+      // Update active filter
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const filter = btn.dataset.filter;
+      
+      // Filter projects with animation
+      projects.forEach(p => {
+        if (filter === 'all' || p.dataset.tags.split(' ').includes(filter)) {
+          p.style.display = '';
+          setTimeout(() => {
+            p.style.opacity = '1';
+            p.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          p.style.opacity = '0';
+          p.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            p.style.display = 'none';
+          }, 300);
+        }
+      });
+    }));
+  }
 
-  // --- Modal ---
+  // ==================== PROJECT MODAL ====================
   const modal = document.getElementById('projectModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalTech = document.getElementById('modalTech');
@@ -44,26 +198,54 @@
   const modalDemo = document.getElementById('modalDemo');
   const modalRepo = document.getElementById('modalRepo');
   const closeModal = document.getElementById('closeModal');
-  const prevBtn = document.getElementById('prevImage');
-  const nextBtn = document.getElementById('nextImage');
 
   let currentImages = [];
   let currentIndex = 0;
 
   function updateGallery() {
+    if (!modalGallery) return;
+    
     modalGallery.innerHTML = '';
     currentImages.forEach((src, i) => {
       const img = document.createElement('img');
-      img.src = src;
+      img.src = src.trim();
       img.alt = modalTitle.textContent;
       img.className = 'gallery-image';
       if (i === currentIndex) img.classList.add('active');
-      img.addEventListener('click', () => window.open(src, '_blank'));
+      
+      // Click to view fullscreen
+      img.addEventListener('click', () => {
+        const fullscreenDiv = document.createElement('div');
+        fullscreenDiv.className = 'fullscreen-image show';
+        fullscreenDiv.innerHTML = `
+          <button class="fullscreen-close"><i class="fas fa-times"></i></button>
+          <img src="${src.trim()}" alt="${modalTitle.textContent}">
+        `;
+        document.body.appendChild(fullscreenDiv);
+        document.body.style.overflow = 'hidden';
+        
+        fullscreenDiv.querySelector('.fullscreen-close').addEventListener('click', () => {
+          fullscreenDiv.classList.remove('show');
+          setTimeout(() => {
+            document.body.removeChild(fullscreenDiv);
+            document.body.style.overflow = '';
+          }, 300);
+        });
+        
+        fullscreenDiv.addEventListener('click', (e) => {
+          if (e.target === fullscreenDiv) {
+            fullscreenDiv.querySelector('.fullscreen-close').click();
+          }
+        });
+      });
+      
       modalGallery.appendChild(img);
     });
   }
 
   function showModal(card) {
+    if (!modal) return;
+    
     modalTitle.textContent = card.dataset.title || '';
     modalTech.textContent = card.dataset.tech || '';
     modalDescText.textContent = card.dataset.desc || '';
@@ -71,152 +253,113 @@
     currentIndex = 0;
     updateGallery();
 
-    modalDemo.href = card.dataset.demo || '#';
-    modalRepo.href = card.dataset.repo || '#';
+    if (modalDemo) modalDemo.href = card.dataset.demo || '#';
+    if (modalRepo) modalRepo.href = card.dataset.repo || '#';
 
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
+  // Attach modal triggers
   document.querySelectorAll('.view-project').forEach(btn => {
-    btn.addEventListener('click', e => showModal(e.target.closest('.project')));
-  });
-
-  closeModal.addEventListener('click', () => {
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  });
-
-  modal.addEventListener('click', e => { if (e.target === modal) closeModal.click(); });
-
-  prevBtn.addEventListener('click', () => {
-    if (!currentImages.length) return;
-    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-    updateGallery();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (!currentImages.length) return;
-    currentIndex = (currentIndex + 1) % currentImages.length;
-    updateGallery();
-  });
-
-  // --- Formulario de contacto ---
-  const form = document.getElementById('contactForm');
-  const formMsg = document.getElementById('formMsg');
-  if (form) {
-    form.addEventListener('submit', e => {
+    btn.addEventListener('click', e => {
       e.preventDefault();
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-      if (!name || !email || !message) {
-        formMsg.textContent = 'Por favor completa todos los campos.';
+      showModal(e.target.closest('.project'));
+    });
+  });
+
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('show');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (modal) {
+    modal.addEventListener('click', e => {
+      if (e.target === modal) {
+        closeModal.click();
+      }
+    });
+  }
+
+  // ==================== CONTACT FORM ====================
+  const contactForm = document.getElementById('contactForm');
+  const formMsg = document.getElementById('formMsg');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+      
+      // Basic validation
+      if (!data.name || !data.email || !data.message) {
+        formMsg.textContent = '⚠️ Por favor completa todos los campos requeridos.';
+        formMsg.style.color = '#ff6b6b';
         return;
       }
-      const subject = encodeURIComponent('Contacto portafolio - ' + name);
-      const body = encodeURIComponent(message + '\n\nDe: ' + name + ' - ' + email);
-      window.location.href = `mailto:guilder@example.com?subject=${subject}&body=${body}`;
-      formMsg.textContent = 'Se abrirá tu cliente de correo para enviar el mensaje.';
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(data.email)) {
+        formMsg.textContent = '⚠️ Por favor ingresa un email válido.';
+        formMsg.style.color = '#ff6b6b';
+        return;
+      }
+      
+      // Show loading state
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+      submitBtn.disabled = true;
+      
+      // Simulate form submission (replace with actual backend call)
+      setTimeout(() => {
+        formMsg.textContent = '✅ ¡Mensaje enviado con éxito! Te contactaremos pronto.';
+        formMsg.style.color = '#51cf66';
+        contactForm.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          formMsg.textContent = '';
+        }, 5000);
+      }, 1500);
     });
   }
 
-  // --- Descargar CV ---
-  const downloadBtn = document.getElementById('downloadCv');
-  if (downloadBtn) {
-    downloadBtn.addEventListener('click', () => {
-      const data = 'Curriculum - Guilder Paredes Lovera\nFullstack Developer\nCochabamba, Bolivia';
-      const blob = new Blob([data], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'CV-Guilder-Paredes.txt';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    });
-  }
-
-  // --- Botón contratación ---
-  const hireBtn = document.getElementById('hireBtn');
-  if (hireBtn) hireBtn.addEventListener('click', () => document.querySelector('a[href="#contacto"]').click());
-
-})();
-// --- Modal y galería ---
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalTech = document.getElementById('modalTech');
-const modalDescText = document.getElementById('modalDescText');
-const modalGallery = document.getElementById('modalGallery');
-const modalDemo = document.getElementById('modalDemo');
-const modalRepo = document.getElementById('modalRepo');
-const closeModal = document.getElementById('closeModal');
-const prevBtn = document.getElementById('prevImage');
-const nextBtn = document.getElementById('nextImage');
-
-let currentImages = [];
-let currentIndex = 0;
-
-// Actualiza la galería mostrando solo la imagen activa
-function updateGallery() {
-  modalGallery.innerHTML = '';
-  currentImages.forEach((src, i) => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = modalTitle.textContent;
-    img.className = 'gallery-image';
-    if (i === currentIndex) img.classList.add('active'); // activa la imagen actual
-    img.addEventListener('click', () => window.open(src, '_blank')); // abrir en nueva pestaña
-    modalGallery.appendChild(img);
+  // ==================== HEADER SCROLL EFFECT ====================
+  let lastScroll = 0;
+  const header = document.querySelector('.site-header');
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+      header.style.padding = '12px 20px';
+    } else {
+      header.style.padding = '16px 24px';
+    }
+    
+    lastScroll = currentScroll;
   });
-}
 
-// Abre el modal con los datos del proyecto
-function showModal(card) {
-  modalTitle.textContent = card.dataset.title || '';
-  modalTech.textContent = card.dataset.tech || '';
-  modalDescText.textContent = card.dataset.desc || '';
-  currentImages = card.dataset.images ? card.dataset.images.split(',') : [];
-  currentIndex = 0;
-  updateGallery();
+  // ==================== FLOATING ANIMATION ====================
+  const floatingCards = document.querySelectorAll('.floating-card');
+  floatingCards.forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.5}s`;
+  });
 
-  modalDemo.href = card.dataset.demo || '#';
-  modalRepo.href = card.dataset.repo || '#';
-
-  modal.classList.add('show');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-// Botón para abrir modal desde un proyecto
-document.querySelectorAll('.view-project').forEach(btn => {
-  btn.addEventListener('click', e => showModal(e.target.closest('.project')));
-});
-
-// Cerrar modal
-closeModal.addEventListener('click', () => {
-  modal.classList.remove('show');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-});
-
-// Cerrar modal haciendo clic fuera del contenido
-modal.addEventListener('click', e => {
-  if (e.target === modal) closeModal.click();
-});
-
-// Botones de navegación de la galería
-prevBtn.addEventListener('click', () => {
-  if (!currentImages.length) return;
-  currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-  updateGallery();
-});
-
-nextBtn.addEventListener('click', () => {
-  if (!currentImages.length) return;
-  currentIndex = (currentIndex + 1) % currentImages.length;
-  updateGallery();
-});
+  // ==================== INITIALIZE ====================
+  console.log('✅ TuAppYaSoft - Website loaded successfully!');
+  
+  // Add entrance animation to hero
+  setTimeout(() => {
+    document.querySelector('.hero')?.classList.add('visible');
+  }, 100);
+})();

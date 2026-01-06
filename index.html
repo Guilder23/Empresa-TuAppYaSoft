@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Guilder Paredes Lovera — Portafolio</title>
-  <meta name="description" content="Portafolio profesional de Guilder Paredes Lovera — Fullstack Developer" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>TuAppYaSoft — Desarrollo de Software y Páginas Web Profesionales</title>
+  <meta name="description" content="Desarrollo de software y páginas web profesionales para tu negocio. Sitios web estáticos, dinámicos, e-commerce y aplicaciones a medida. Precios accesibles y calidad garantizada." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="cursor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,95 +15,388 @@
 <body class="dark">
   <header class="site-header">
     <div class="brand">
-      <div class="logo">GPL</div>
+      <div class="logo">
+        <i class="fas fa-rocket"></i>
+      </div>
       <div class="who">
-        <h1>Guilder <span class="highlight">Paredes Lovera</span></h1>
-        <p class="muted"><i class="fas fa-code"></i> Fullstack Developer — <i class="fas fa-map-marker-alt"></i>
-         Cochabamba, Bolivia</p>
+        <h1>TuApp<span class="highlight">YaSoft</span></h1>
+        <p class="muted"><i class="fas fa-code"></i> Desarrollo de Software Profesional</p>
       </div>
     </div>
 
     <nav class="nav">
-      <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
-      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Proyectos</a>
-      <a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a>
+      <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+      <a href="#servicios"><i class="fas fa-briefcase"></i> Servicios</a>
+      <a href="#precios"><i class="fas fa-tags"></i> Precios</a>
+      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Portafolio</a>
+      <a href="#nosotros"><i class="fas fa-users"></i> Nosotros</a>
       <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
+      <!-- Theme Toggle Button -->
+  <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+    <i class="fas fa-sun"></i>
+    <i class="fas fa-moon"></i>
+  </button>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
   </header>
 
   <main class="container">
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero animate-on-scroll" id="inicio">
       <div class="hero-left card-3d">
-        <h2>Hola, soy <span class="accent">Guilder</span>.</h2>
-        <p class="lead">Construyo productos web con foco en rendimiento, experiencia de usuario (UX) y escalabilidad.
-          Creando interfaces modernas, accesibles y eficientes, diseñadas para usuarios reales y negocios que buscan
-          crecer.</p>
-        <div class="cta-row">
-          <button id="hireBtn" class="btn primary"><i class="fas fa-handshake"></i> Contrátame</button>
-          <a href="#proyectos" class="btn ghost"><i class="fas fa-eye"></i> Ver proyectos</a>
-          <!-- <a href="#" id="downloadCv" class="btn ghost"><i class="fas fa-file-download"></i> Descargar CV</a> -->
+        <div class="hero-badge">
+          <i class="fas fa-award"></i> Soluciones Digitales de Calidad
+        </div>
+        <h2 class="hero-title">Transforma Tu Negocio Con <span class="accent gradient-text">Software Profesional</span></h2>
+        <p class="lead">Desarrollamos páginas web y aplicaciones a medida para impulsar tu negocio. Desde sitios web estáticos hasta plataformas dinámicas complejas, e-commerce y sistemas personalizados. <strong>Calidad profesional a precios accesibles.</strong></p>
+        
+        <div class="hero-features">
+          <div class="feature-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Diseño Moderno</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Responsive</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-check-circle"></i>
+            <span>SEO Optimizado</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-check-circle"></i>
+            <span>Rápido</span>
+          </div>
         </div>
 
-        <ul class="highlights">
-          <!-- <li><i class="fab fa-react"></i> React • <i class="fab fa-node-js"></i> Node • <i class="fab fa-laravel"></i>
-            Laravel • <i class="fab fa-python"></i> Django</li>
-          <li><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i> PostgreSQL • <i
-              class="fas fa-fire"></i> Firebase • <i class="fas fa-database"></i> MongoDB</li> -->
-          <li><i class="fas fa-laptop"></i> Interfaces modernas, performance y accesibilidad</li>
-        </ul>
+        <div class="cta-row">
+          <a href="#contacto" class="btn primary pulse"><i class="fas fa-rocket"></i> Comenzar Proyecto</a>
+          <a href="#servicios" class="btn ghost"><i class="fas fa-briefcase"></i> Ver Servicios</a>
+        </div>
+
+        <div class="trust-badges">
+          <div class="badge-item">
+            <i class="fas fa-users"></i>
+            <div>
+              <strong>50+</strong>
+              <span>Clientes Satisfechos</span>
+            </div>
+          </div>
+          <div class="badge-item">
+            <i class="fas fa-project-diagram"></i>
+            <div>
+              <strong>100+</strong>
+              <span>Proyectos Entregados</span>
+            </div>
+          </div>
+          <div class="badge-item">
+            <i class="fas fa-star"></i>
+            <div>
+              <strong>5.0</strong>
+              <span>Calificación Promedio</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <aside class="profile-card card-3d" data-tilt>
-        <div class="profile-image-circle">
-          <img src="GuilderFotoPerfil.jpg" alt="Guilder Paredes">
-        </div>
-        <div class="profile-info">
-          <strong>Guilder Paredes</strong>
-          <span class="muted">Estudiante de Ingeniería en Sistemas — UMSS</span>
-          <p class="muted small">Fullstack</p>
-
-          <div class="socials">
-            <a href="https://github.com/Guilder23" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin"></i>
-            </a>
+      <aside class="hero-right card-3d" data-tilt>
+        <div class="hero-image-container">
+          <div class="floating-card card-1">
+            <i class="fas fa-code"></i>
+            <span>Código Limpio</span>
+          </div>
+          <div class="floating-card card-2">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Mobile First</span>
+          </div>
+          <div class="floating-card card-3">
+            <i class="fas fa-bolt"></i>
+            <span>Alta Velocidad</span>
+          </div>
+          <div class="hero-illustration">
+            <i class="fas fa-laptop-code"></i>
           </div>
         </div>
       </aside>
     </section>
 
-    <!-- About Me Section -->
-    <section id="sobre-mi" class="section about">
+    <!-- Services Section -->
+    <section id="servicios" class="section services animate-on-scroll">
       <div class="section-header">
-        <h2><i class="fas fa-user-circle"></i> Sobre Mí</h2>
+        <h2><i class="fas fa-briefcase"></i> Nuestros Servicios</h2>
+        <p class="section-subtitle">Soluciones completas para cada tipo de negocio</p>
       </div>
 
-      <div class="about-content">
-        <div class="about-text">
-          <p>Soy un desarrollador fullstack apasionado por crear soluciones tecnológicas que resuelvan problemas reales.
-            Actualmente estudio Ingeniería en Sistemas en la Universidad Mayor de San Simón (UMSS).</p>
-          <p>Mi enfoque se centra en desarrollar aplicaciones con interfaces modernas, alto rendimiento y excelente
-            experiencia de usuario. Me especializo en tecnologías web, con experiencia en el desarrollo de
-            aplicaciones completas desde el frontend hasta el backend.</p>
-          <p>Siempre estoy aprendiendo nuevas tecnologías y metodologías para mejorar mis habilidades y ofrecer
-            soluciones más eficientes.</p>
-        </div>
+      <div class="services-grid">
+        <article class="service-card card-3d" data-tilt>
+          <div class="service-icon">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <h3>Páginas Web Estáticas</h3>
+          <p>Sitios web rápidos y elegantes perfectos para presentar tu negocio, portafolios, landing pages y más.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Diseño personalizado</li>
+            <li><i class="fas fa-check"></i> Totalmente responsive</li>
+            <li><i class="fas fa-check"></i> Optimizado para SEO</li>
+            <li><i class="fas fa-check"></i> Carga ultra rápida</li>
+            <li><i class="fas fa-check"></i> Hosting incluido</li>
+          </ul>
+          <div class="service-price">Desde <span>$150</span></div>
+        </article>
 
-        <div class="about-stats">
-          <div class="stat-item">
-            <div class="stat-number">2+</div>
-            <div class="stat-label">Años de experiencia</div>
+        <article class="service-card card-3d featured" data-tilt>
+          <div class="popular-badge">
+            <i class="fas fa-fire"></i> Más Popular
           </div>
-          <div class="stat-item">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Proyectos completados</div>
+          <div class="service-icon">
+            <i class="fas fa-globe"></i>
           </div>
-          <div class="stat-item">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Tecnologías dominadas</div>
+          <h3>Páginas Web Dinámicas</h3>
+          <p>Aplicaciones web completas con bases de datos, paneles de administración y funcionalidades avanzadas.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Base de datos integrada</li>
+            <li><i class="fas fa-check"></i> Panel de administración</li>
+            <li><i class="fas fa-check"></i> Sistema de usuarios</li>
+            <li><i class="fas fa-check"></i> API REST</li>
+            <li><i class="fas fa-check"></i> Actualizaciones en tiempo real</li>
+          </ul>
+          <div class="service-price">Desde <span>$500</span></div>
+        </article>
+
+        <article class="service-card card-3d" data-tilt>
+          <div class="service-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>E-Commerce / Tiendas Online</h3>
+          <p>Plataformas de comercio electrónico completas con carrito, pagos en línea y gestión de inventario.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Catálogo de productos</li>
+            <li><i class="fas fa-check"></i> Carrito de compras</li>
+            <li><i class="fas fa-check"></i> Pasarela de pagos</li>
+            <li><i class="fas fa-check"></i> Gestión de inventario</li>
+            <li><i class="fas fa-check"></i> Informes y analíticas</li>
+          </ul>
+          <div class="service-price">Desde <span>$800</span></div>
+        </article>
+
+        <article class="service-card card-3d" data-tilt>
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Aplicaciones Móviles</h3>
+          <p>Apps nativas y multiplataforma para iOS y Android que llevarán tu negocio al siguiente nivel.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> iOS y Android</li>
+            <li><i class="fas fa-check"></i> Diseño nativo</li>
+            <li><i class="fas fa-check"></i> Notificaciones push</li>
+            <li><i class="fas fa-check"></i> Integración API</li>
+            <li><i class="fas fa-check"></i> Modo offline</li>
+          </ul>
+          <div class="service-price">Desde <span>$1,200</span></div>
+        </article>
+
+        <article class="service-card card-3d" data-tilt>
+          <div class="service-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Sistemas a Medida</h3>
+          <p>Desarrollo de software personalizado para automatizar y optimizar los procesos de tu empresa.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Análisis de requerimientos</li>
+            <li><i class="fas fa-check"></i> Desarrollo personalizado</li>
+            <li><i class="fas fa-check"></i> Integración con sistemas existentes</li>
+            <li><i class="fas fa-check"></i> Capacitación incluida</li>
+            <li><i class="fas fa-check"></i> Soporte continuo</li>
+          </ul>
+          <div class="service-price">Desde <span>$1,500</span></div>
+        </article>
+
+        <article class="service-card card-3d" data-tilt>
+          <div class="service-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Diseño UX/UI</h3>
+          <p>Diseños modernos y atractivos centrados en la experiencia del usuario para maximizar conversiones.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> Prototipado interactivo</li>
+            <li><i class="fas fa-check"></i> Diseño de interfaz</li>
+            <li><i class="fas fa-check"></i> Identidad visual</li>
+            <li><i class="fas fa-check"></i> Testing de usabilidad</li>
+            <li><i class="fas fa-check"></i> Guía de estilo</li>
+          </ul>
+          <div class="service-price">Desde <span>$300</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="section industries animate-on-scroll">
+      <div class="section-header">
+        <h2><i class="fas fa-industry"></i> Trabajamos con Todo Tipo de Negocios</h2>
+        <p class="section-subtitle">Soluciones digitales para cualquier industria</p>
+      </div>
+
+      <div class="industries-grid">
+        <div class="industry-item">
+          <i class="fas fa-store"></i>
+          <h4>Retail & E-commerce</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-utensils"></i>
+          <h4>Restaurantes & Cafés</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-heartbeat"></i>
+          <h4>Salud & Bienestar</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h4>Educación</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-home"></i>
+          <h4>Bienes Raíces</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-briefcase"></i>
+          <h4>Servicios Profesionales</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-dumbbell"></i>
+          <h4>Fitness & Gimnasios</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-hotel"></i>
+          <h4>Turismo & Hoteles</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-paint-roller"></i>
+          <h4>Construcción</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-car"></i>
+          <h4>Automotriz</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-cut"></i>
+          <h4>Belleza & Spa</h4>
+        </div>
+        <div class="industry-item">
+          <i class="fas fa-ellipsis-h"></i>
+          <h4>Y Muchos Más...</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="section pricing animate-on-scroll">
+      <div class="section-header">
+        <h2><i class="fas fa-tags"></i> Planes y Precios</h2>
+        <p class="section-subtitle">Soluciones profesionales a precios accesibles y charlables</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card card-3d" data-tilt>
+          <div class="price-header">
+            <h3>Básico</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">200</span>
+              <span class="period">/ proyecto</span>
+            </div>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Sitio web estático (hasta 5 páginas)</li>
+            <li><i class="fas fa-check"></i> Diseño responsive</li>
+            <li><i class="fas fa-check"></i> Optimización SEO básica</li>
+            <li><i class="fas fa-check"></i> Formulario de contacto</li>
+            <li><i class="fas fa-check"></i> Integración redes sociales</li>
+            <li><i class="fas fa-check"></i> 1 revisión incluida</li>
+            <li><i class="fas fa-check"></i> Hosting 6 meses gratis</li>
+            <li><i class="fas fa-times muted"></i> Base de datos</li>
+            <li><i class="fas fa-times muted"></i> Panel administrativo</li>
+          </ul>
+          <a href="#contacto" class="btn outline">Solicitar</a>
+          <div class="ideal-for">Ideal para: Landing pages, portafolios, presentación de negocio</div>
+        </article>
+
+        <article class="price-card card-3d featured" data-tilt>
+          <div class="popular-ribbon">
+            <i class="fas fa-crown"></i> Recomendado
+          </div>
+          <div class="price-header">
+            <h3>Profesional</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">650</span>
+              <span class="period">/ proyecto</span>
+            </div>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> Sitio web dinámico completo</li>
+            <li><i class="fas fa-check"></i> Hasta 15 páginas</li>
+            <li><i class="fas fa-check"></i> Base de datos integrada</li>
+            <li><i class="fas fa-check"></i> Panel de administración</li>
+            <li><i class="fas fa-check"></i> Sistema de usuarios</li>
+            <li><i class="fas fa-check"></i> SEO avanzado</li>
+            <li><i class="fas fa-check"></i> 3 revisiones incluidas</li>
+            <li><i class="fas fa-check"></i> Hosting 1 año gratis</li>
+            <li><i class="fas fa-check"></i> Soporte 3 meses</li>
+          </ul>
+          <a href="#contacto" class="btn primary">Solicitar</a>
+          <div class="ideal-for">Ideal para: Negocios, catálogos, directorios, blogs profesionales</div>
+        </article>
+
+        <article class="price-card card-3d" data-tilt>
+          <div class="price-header">
+            <h3>Empresarial</h3>
+            <div class="price">
+              <span class="currency">$</span>
+              <span class="amount">1,200</span>
+              <span class="period">/ proyecto</span>
+            </div>
+          </div>
+          <ul class="price-features">
+            <li><i class="fas fa-check"></i> E-commerce o sistema a medida</li>
+            <li><i class="fas fa-check"></i> Páginas ilimitadas</li>
+            <li><i class="fas fa-check"></i> Base de datos avanzada</li>
+            <li><i class="fas fa-check"></i> Panel admin completo</li>
+            <li><i class="fas fa-check"></i> Pasarela de pagos</li>
+            <li><i class="fas fa-check"></i> API REST</li>
+            <li><i class="fas fa-check"></i> Revisiones ilimitadas</li>
+            <li><i class="fas fa-check"></i> Hosting 1 año gratis</li>
+            <li><i class="fas fa-check"></i> Soporte 6 meses</li>
+          </ul>
+          <a href="#contacto" class="btn outline">Solicitar</a>
+          <div class="ideal-for">Ideal para: Tiendas online, plataformas, sistemas corporativos</div>
+        </article>
+      </div>
+
+      <div class="pricing-note">
+        <i class="fas fa-info-circle"></i>
+        <p><strong>¿Necesitas algo diferente?</strong> Todos nuestros precios son negociables y nos adaptamos a tu presupuesto. Ofrecemos planes de pago flexibles y descuentos por múltiples proyectos. <a href="#contacto">Contáctanos</a> para obtener una cotización personalizada sin compromiso.</p>
+      </div>
+
+      <div class="payment-options">
+        <h3><i class="fas fa-credit-card"></i> Facilidades de Pago</h3>
+        <div class="options-grid">
+          <div class="option-item">
+            <i class="fas fa-hand-holding-usd"></i>
+            <span>Pago en cuotas</span>
+          </div>
+          <div class="option-item">
+            <i class="fas fa-percentage"></i>
+            <span>Descuentos por anticipo</span>
+          </div>
+          <div class="option-item">
+            <i class="fas fa-calendar-check"></i>
+            <span>Plazos flexibles</span>
+          </div>
+          <div class="option-item">
+            <i class="fas fa-handshake"></i>
+            <span>Precios charlables</span>
           </div>
         </div>
       </div>
@@ -278,6 +571,111 @@
       </div>
     </section> -->
     </section>
+
+    <!-- About Us / Nosotros Section -->
+    <section id="nosotros" class="section about-us animate-on-scroll">
+      <div class="section-header">
+        <h2><i class="fas fa-users"></i> Sobre Nosotros</h2>
+        <p class="section-subtitle">Un equipo comprometido con tu éxito digital</p>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text-section">
+          <h3><i class="fas fa-rocket"></i> Nuestra Misión</h3>
+          <p>En <strong>TuAppYaSoft</strong>, transformamos ideas en realidades digitales. Somos una empresa de desarrollo de software especializada en crear soluciones web profesionales y accesibles para todo tipo de negocios.</p>
+          
+          <p>Creemos que <strong>toda empresa merece tener presencia digital de calidad</strong>, sin importar su tamaño o presupuesto. Por eso ofrecemos servicios profesionales a precios accesibles y charlables, con planes de pago flexibles que se adaptan a tus necesidades.</p>
+
+          <h3 class="mt-4"><i class="fas fa-bullseye"></i> ¿Por Qué Elegirnos?</h3>
+          <div class="why-choose-grid">
+            <div class="why-item">
+              <i class="fas fa-dollar-sign"></i>
+              <div>
+                <h4>Precios Accesibles</h4>
+                <p>Calidad profesional sin romper tu presupuesto. Precios justos y charlables.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fas fa-code"></i>
+              <div>
+                <h4>Código de Calidad</h4>
+                <p>Desarrollamos con las mejores prácticas y tecnologías modernas.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Entregas Puntuales</h4>
+                <p>Cumplimos con los plazos acordados sin sacrificar calidad.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fas fa-headset"></i>
+              <div>
+                <h4>Soporte Continuo</h4>
+                <p>Estamos contigo después del lanzamiento con soporte dedicado.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fas fa-mobile-alt"></i>
+              <div>
+                <h4>Diseño Responsive</h4>
+                <p>Tu sitio se verá perfecto en todos los dispositivos.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <i class="fas fa-chart-line"></i>
+              <div>
+                <h4>SEO Optimizado</h4>
+                <p>Te ayudamos a ser encontrado en Google y otros buscadores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-section">
+          <div class="stat-box">
+            <i class="fas fa-award"></i>
+            <div class="stat-number" data-target="3">3</div>
+            <div class="stat-label">Años de Experiencia</div>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-project-diagram"></i>
+            <div class="stat-number" data-target="100">100</div>
+            <div class="stat-label">Proyectos Completados</div>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-smile"></i>
+            <div class="stat-number" data-target="50">50</div>
+            <div class="stat-label">Clientes Felices</div>
+          </div>
+          <div class="stat-box">
+            <i class="fas fa-star"></i>
+            <div class="stat-number" data-target="5">5.0</div>
+            <div class="stat-label">Calificación Promedio</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="technologies-showcase">
+        <h3><i class="fas fa-tools"></i> Tecnologías que Dominamos</h3>
+        <div class="tech-logos">
+          <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="tech-item"><i class="fab fa-react"></i> React</div>
+          <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="tech-item"><i class="fab fa-python"></i> Python</div>
+          <div class="tech-item"><i class="fab fa-laravel"></i> Laravel</div>
+          <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+          <div class="tech-item"><i class="fab fa-flutter"></i> Flutter</div>
+          <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
+          <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
+          <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
+        </div>
+      </div>
+    </section>
+
     <!-- Skills Section con tarjetas -->
     <section id="habilidades" class="section">
       <div class="section-header">
@@ -378,51 +776,117 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="section">
+    <section id="contacto" class="section contact-section animate-on-scroll">
       <div class="section-header">
         <h2><i class="fas fa-envelope"></i> Contacto</h2>
+        <p class="section-subtitle">¿Listo para comenzar tu proyecto? Hablemos</p>
+      </div>
+
+      <div class="contact-cta">
+        <h3>¡Transforma tu Idea en Realidad Digital!</h3>
+        <p>Obtén una cotización gratuita y sin compromiso. Respondemos en menos de 24 horas.</p>
       </div>
 
       <div class="contact-container">
         <div class="contact-left card-3d">
-          <h3>Envíame un mensaje</h3>
-          <p class="muted">¿Tienes un proyecto o quieres ver más? Contáctame.</p>
+          <h3>Envíanos un Mensaje</h3>
+          <p class="muted">Cuéntanos sobre tu proyecto y te contactaremos pronto</p>
           <form id="contactForm" class="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name"><i class="fas fa-user"></i> Nombre</label>
-              <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+            <div class="form-row-two">
+              <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Nombre Completo</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input id="email" name="email" type="email" placeholder="tu@email.com" required>
+              </div>
+            </div>
+            <div class="form-row-two">
+              <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Teléfono (Opcional)</label>
+                <input id="phone" name="phone" type="tel" placeholder="+591 12345678">
+              </div>
+              <div class="form-group">
+                <label for="service"><i class="fas fa-briefcase"></i> Tipo de Servicio</label>
+                <select id="service" name="service">
+                  <option value="">Selecciona un servicio</option>
+                  <option value="web-estatica">Página Web Estática</option>
+                  <option value="web-dinamica">Página Web Dinámica</option>
+                  <option value="ecommerce">E-Commerce</option>
+                  <option value="mobile">Aplicación Móvil</option>
+                  <option value="sistema">Sistema a Medida</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email"><i class="fas fa-envelope"></i> Email</label>
-              <input id="email" name="email" type="email" placeholder="Tu email" required>
-            </div>
-            <div class="form-group">
-              <label for="message"><i class="fas fa-comment"></i> Mensaje</label>
-              <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..."
-                required></textarea>
+              <label for="message"><i class="fas fa-comment"></i> Cuéntanos sobre tu Proyecto</label>
+              <textarea id="message" name="message" rows="6" placeholder="Describe tu proyecto, objetivos, plazos, presupuesto aproximado, etc." required></textarea>
             </div>
             <div class="form-row">
-              <button class="btn primary" type="submit"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+              <button class="btn primary large" type="submit">
+                <i class="fas fa-paper-plane"></i> Solicitar Cotización Gratuita
+              </button>
             </div>
             <p id="formMsg" class="muted small" aria-live="polite"></p>
           </form>
         </div>
 
-        <aside class="contact-right card-3d">
-          <h3><i class="fas fa-address-card"></i> Información de contacto</h3>
-          <ul class="contact-info">
-            <li><i class="fas fa-map-marker-alt"></i> Quillacollo-Cochabamba, Bolivia</li>
-            <li><i class="fas fa-envelope"></i> <a href="plg39395@gmail.com">pplg39395@gmail.com</a></li>
-            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/qr/NAOI2LSVZ64MA1">+591 77910962</a> </li>
-          </ul>
+        <aside class="contact-right">
+          <div class="contact-info-card card-3d">
+            <h3><i class="fas fa-address-card"></i> Información de Contacto</h3>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <strong>Ubicación</strong>
+                  <span>Cochabamba, Bolivia</span>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:plg39395@gmail.com">plg39395@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/59177910962" target="_blank">+591 77910962</a>
+                </div>
+              </li>
+              <li>
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Horario</strong>
+                  <span>Lun - Sáb: 9:00 AM - 7:00 PM</span>
+                </div>
+              </li>
+            </ul>
 
-          <h4> Redes sociales</h4>
-          <div class="social-links">
-            <a href="https://github.com/Guilder23" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" class="social-link"><i class="fab fa-linkedin"></i> Linkedin</a>
-            <!-- <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a> -->
+            <h4><i class="fas fa-share-alt"></i> Síguenos</h4>
+            <div class="social-links">
+              <a href="https://github.com/Guilder23" target="_blank" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" target="_blank" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://wa.me/59177910962" target="_blank" class="social-link whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="quick-contact card-3d">
+            <h4><i class="fas fa-bolt"></i> Contacto Rápido</h4>
+            <p>¿Prefieres hablar directamente?</p>
+            <a href="https://wa.me/59177910962" target="_blank" class="btn primary large">
+              <i class="fab fa-whatsapp"></i> Chatea por WhatsApp
+            </a>
           </div>
         </aside>
       </div>
@@ -430,14 +894,54 @@
 
     <footer class="site-footer">
       <div class="footer-content">
-        <div class="footer-logo">GPL</div>
-        <div class="footer-text">
-          <p>© 2025 Guilder Paredes Lovera — Fullstack Developer</p>
-          <!-- <p class="muted small">Diseñado y desarrollado con <i class="fas fa-heart"></i></p> -->
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>TuApp<span class="highlight">YaSoft</span></h3>
+          <p class="muted">Desarrollo de software profesional para impulsar tu negocio al siguiente nivel.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/Guilder23" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/59177910962" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
-        <div class="footer-links">
-          <a href="#hero"><i class="fas fa-arrow-up"></i></a>
+
+        <div class="footer-section">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Páginas Web Estáticas</a></li>
+            <li><a href="#servicios">Páginas Web Dinámicas</a></li>
+            <li><a href="#servicios">E-Commerce</a></li>
+            <li><a href="#servicios">Aplicaciones Móviles</a></li>
+            <li><a href="#servicios">Sistemas a Medida</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#proyectos">Portafolio</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> Cochabamba, Bolivia</li>
+            <li><i class="fas fa-envelope"></i> plg39395@gmail.com</li>
+            <li><i class="fab fa-whatsapp"></i> +591 77910962</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 TuAppYaSoft. Todos los derechos reservados.</p>
+        <p class="muted small">Desarrollado con <i class="fas fa-heart"></i> por TuAppYaSoft</p>
+        <a href="#inicio" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
       </div>
     </footer>
   </main>
