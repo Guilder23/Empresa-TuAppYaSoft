@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guilder Paredes Lovera — Portafolio</title>
+  <meta name="description" content="Portafolio profesional de Guilder Paredes Lovera — Fullstack Developer" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cursor.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark">
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">GPL</div>
+      <div class="who">
+        <h1>Guilder <span class="highlight">Paredes Lovera</span></h1>
+        <p class="muted"><i class="fas fa-code"></i> Fullstack Developer — <i class="fas fa-map-marker-alt"></i>
+         Cochabamba, Bolivia</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Proyectos</a>
+      <a href="#habilidades"><i class="fas fa-tools"></i> Habilidades</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-left card-3d">
+        <h2>Hola, soy <span class="accent">Guilder</span>.</h2>
+        <p class="lead">Construyo productos web con foco en rendimiento, experiencia de usuario (UX) y escalabilidad.
+          Creando interfaces modernas, accesibles y eficientes, diseñadas para usuarios reales y negocios que buscan
+          crecer.</p>
+        <div class="cta-row">
+          <button id="hireBtn" class="btn primary"><i class="fas fa-handshake"></i> Contrátame</button>
+          <a href="#proyectos" class="btn ghost"><i class="fas fa-eye"></i> Ver proyectos</a>
+          <!-- <a href="#" id="downloadCv" class="btn ghost"><i class="fas fa-file-download"></i> Descargar CV</a> -->
+        </div>
+
+        <ul class="highlights">
+          <!-- <li><i class="fab fa-react"></i> React • <i class="fab fa-node-js"></i> Node • <i class="fab fa-laravel"></i>
+            Laravel • <i class="fab fa-python"></i> Django</li>
+          <li><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i> PostgreSQL • <i
+              class="fas fa-fire"></i> Firebase • <i class="fas fa-database"></i> MongoDB</li> -->
+          <li><i class="fas fa-laptop"></i> Interfaces modernas, performance y accesibilidad</li>
+        </ul>
+      </div>
+
+      <aside class="profile-card card-3d" data-tilt>
+        <div class="profile-image-circle">
+          <img src="GuilderFotoPerfil.jpg" alt="Guilder Paredes">
+        </div>
+        <div class="profile-info">
+          <strong>Guilder Paredes</strong>
+          <span class="muted">Estudiante de Ingeniería en Sistemas — UMSS</span>
+          <p class="muted small">Fullstack</p>
+
+          <div class="socials">
+            <a href="https://github.com/Guilder23" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="sobre-mi" class="section about">
+      <div class="section-header">
+        <h2><i class="fas fa-user-circle"></i> Sobre Mí</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p>Soy un desarrollador fullstack apasionado por crear soluciones tecnológicas que resuelvan problemas reales.
+            Actualmente estudio Ingeniería en Sistemas en la Universidad Mayor de San Simón (UMSS).</p>
+          <p>Mi enfoque se centra en desarrollar aplicaciones con interfaces modernas, alto rendimiento y excelente
+            experiencia de usuario. Me especializo en tecnologías web, con experiencia en el desarrollo de
+            aplicaciones completas desde el frontend hasta el backend.</p>
+          <p>Siempre estoy aprendiendo nuevas tecnologías y metodologías para mejorar mis habilidades y ofrecer
+            soluciones más eficientes.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Proyectos completados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Tecnologías dominadas</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-laptop-code"></i> Algunos Proyectos</h2>
+        <div class="filters">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+          <button class="filter" data-filter="ecommerce">Ecommerce</button>
+          <button class="filter" data-filter="mvp">MVP</button>
+        </div>
+      </div>
+
+      <div id="projectsGrid" class="projects-grid">
+        <!-- Project cards (data-* attributes used for filtering and details) -->
+        <!-- <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales" data-tech="React, Node, PostgreSQL" data-desc="Tienda online con catálogo, carrito, pasarela de pago y panel administrativo.">
+          <div class="p-thumb" style="background-image:url('assets/contruccion1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-shopping-cart"></i> Ecommerce de materiales</h4>
+            <p class="muted"><i class="fab fa-react"></i> React • <i class="fab fa-node-js"></i> Node • <i class="fas fa-database"></i> PostgreSQL</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </article> -->
+        <article class="project card-3d" data-tags="mvp " data-title="Sistema de inscripciones"
+          data-tech="Laravel,php, MySQL"
+          data-desc="Sistema integral de inscripciones para olimpiadas OH-SANSI desarrollado en 2025. Plataforma multi-rol con autenticación segura para estudiantes, docentes y administradores. Estudiantes pueden auto-inscribirse en competencias,
+           mientras docentes inscriben grupos completos. Panel administrativo avanzado para gestión de usuarios, colegios, áreas académicas, categorías por edad/nivel y competencias. Sistema completo de pagos integrado con generación automática de
+            reportes financieros en PDF. Dashboard ejecutivo con gráficos dinámicos en tiempo real: métricas de inscripciones por categoría, colegios participantes, estados de pago y estadísticas de participación. Módulo de reportes personalizables
+             con exportación a PDF para análisis y documentación oficial."
+          data-images="assets/sansi10.png,assets/sansi7.png,assets/sansi2.png, assets/sansi3.png, assets/sansi4.png, assets/sansi5.png,assets/sansi6.png,assets/sansi8.png,assets/sansi9.png ">
+
+          <div class="p-thumb" style="background-image:url('assets/sansi1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-clipboard-check"></i>Sitema de inscripcion Oh-SANSI</h4>
+            <p class="muted"><i class="fab fa-laravel"></i> Laravel • <i class="fas fa-database"></i> MySQL • <i
+                class="fab fa-php"></i>PHP</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
+            </div>
+          </div>
+        </article>
+        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales educativos"
+          data-tech="Python, PostgreSQL" data-desc="Plataforma educativa integral de marketplace. Sistema de autenticación completo (registro, login). Los usuarios pueden 
+          completar su perfil profesional, publicar material educativo para la venta (apuntes, guías, recursos) y comprar productos de otros educadores. Carrito de compras.
+           Sistema de pagos integrado con código QR para transacciones seguras. Panel personalizado para ver historial de compras y ventas, gestionar productos publicados 
+          y estado de pedidos. Sistema de notificaciones en tiempo real para actualizaciones de comprar o ventas. Dashboard con métricas de rendimiento para vendedores.Desarrollado en 2025"
+          data-images="assets/biblioteca1.png,assets/biblioteca2.png,assets/biblioteca3.png,assets/biblioteca4.png,assets/biblioteca5.png,assets/biblioteca6.png,assets/biblioteca7.png ">
+
+          <div class="p-thumb" style="background-image:url('assets/biblioteca1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-clipboard-check"></i>Sistema de venta y compra de materiales educativos</h4>
+            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i
+                class="fab fa-python"></i>Python</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
+            </div>
+          </div>
+        </article>
+        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales"
+          data-tech="django, SQLite" data-desc="E-commerce especializado en materiales de construcción. Sistema completo de autenticación
+           (registro, login). Búsqueda avanzada con múltiples filtros por categoría, precio, marca y especificaciones técnicas. Los usuarios
+            pueden gestionar su perfil, publicar productos para la venta y editar sus publicaciones después de subirlas. Carrito de compras. 
+            Sistema de pago simulado para transacciones de prueba.Desarrollado en 2024"
+          data-images="assets/construccion1.png,assets/construccion2.png,assets/construccion3.png ">
+
+          <div class="p-thumb" style="background-image:url('assets/construccion1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-clipboard-check"></i>Sistema compra y venta de material de construccion</h4>
+            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> SQLite <i class="fab fa-bootstrap"></i>• Bootstrap <i class="fab fa-python"></i> •
+              Python</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project card-3d" data-tags="mobile flutter" data-title="App Flutter — Reserva de asientos"
+          data-tech="Flutter, Firebase, Dart"
+          data-desc="App Android completa para reservas de cine. Sistema de autenticación (registro y login). Los usuarios pueden explorar cartelera completa con 
+          detalles de películas: sinopsis, reparto de actores, duración, género, tráilers y valoraciones. Selección visual interactiva de butacas con mapa del cine en 
+          tiempo real. Gestión de horarios y fechas de funciones. Sistema de compra integrado: reserva de entradas, adición de productos de confitería (combo, palomitas, bebidas) 
+          y pago simulado. Historial detallado de compras con opción de descargar comprobantes en PDF y compartir reservas. Sección de próximos estrenos.Desarrollado en 2024.
+           Persistencia de datos local y sincronización en la nube.""
+          data-images="assets/cine1.png,assets/cine2.png,assets/cine3.png">
+
+          <div class="p-thumb" style="background-image:url('assets/cine1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-mobile-alt"></i> App Flutter — Reserva de asientos CINE</h4>
+            <p class="muted"><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i>Firebase •
+              <i>Dart</i>
+            </p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
+            </div>
+          </div>
+        </article>
+        <article class="project card-3d" data-tags="web admin" data-title="Plataforma de asistencia"
+          data-tech="Laravel, MySQL"
+          data-desc="Sistema integral de control de asistencia y productividad para personal de una Fundacion. Gestión multi-rol: becarios,
+           promotores y jefes de zona. Registro de entrada/salida mediante número de carnet con descripción detallada de actividades
+            realizadas. Monitoreo en tiempo real del personal activo, tiempo trabajado diario y horarios de salida. Panel administrativo
+             para visualizar todos los usuarios registrados y su estado actual. Generación de reportes PDF por rangos de fechas personalizables, 
+             incluyendo resúmenes de horas trabajadas, actividades realizadas. Exportación de datos para análisis externo. Desarrollado en 2023"
+          data-images="assets/asistencia1.png,assets/asistencia2.png ">
+
+          <div class="p-thumb" style="background-image:url('assets/asistencia1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-clipboard-check"></i> Plataforma de asistencia</h4>
+            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> MySQL</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
+            </div>
+          </div>
+        </article>
+
+        <article class="project card-3d" data-tags="web mvp realtime" data-title="Mini Red social"
+          data-tech="React, Django,, Python,SQLite"
+          data-desc="Proyecto académico - Red social universitaria (MVP de práctica). Sistema de autenticación completo para registro y login.
+           Funcionalidades implementadas: publicaciones con texto e imágenes, sistema de 'me gusta' y comentarios, gestión de amigos y seguidores, 
+           chat en tiempo real entre usuarios, y estados efímeros. Desarrollado como ejercicio práctico para aplicar conceptos de desarrollo fullstack,
+            bases de datos relacionales. No desplegado en producción. Desarrolado en 2023"
+          data-images="assets/RedSocial1.png">
+
+          <div class="p-thumb" style="background-image:url('assets/RedSocial1.png');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-users"></i> Mini Red social</h4>
+            <p class="muted"><i class="fab fa-react"></i> React+Django • <i class="fas fa-fire"></i>SQLite • python</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <a class="btn small" href="#" target="_blank" rel="noopener"></a>
+            </div>
+          </div>
+        </article>
+        <!-- 
+
+        <article class="project card-3d" data-tags="web mvp realtime" data-title="Red social universitaria" data-tech="React, Firebase" data-desc="MVP de red social con perfiles, publicaciones y comentarios para estudiantes.">
+          <div class="p-thumb" style="background-image:url('assets/project3.jpg');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-users"></i> Red social universitaria</h4>
+            <p class="muted"><i class="fab fa-react"></i> React • <i class="fas fa-fire"></i> Firebase</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project card-3d" data-tags="mobile flutter" data-title="App Flutter — Reserva de asientos" data-tech="Flutter, SQLite" data-desc="App Android para reservar asientos con selección visual y persistencia local y remota.">
+          <div class="p-thumb" style="background-image:url('assets/project4.jpg');" aria-hidden="true"></div>
+          <div class="project-content">
+            <h4><i class="fas fa-mobile-alt"></i> App Flutter — Reserva de asientos</h4>
+            <p class="muted"><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i> SQLite</p>
+            <div class="p-actions">
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section> -->
+    </section>
+    <!-- Skills Section con tarjetas -->
+    <section id="habilidades" class="section">
+      <div class="section-header">
+        <h2>Habilidades</h2>
+      </div>
+
+      <!-- Tarjetas de especialización -->
+      <div class="skills-cards">
+        <div class="skill-card card-3d" data-tilt>
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Frontend</h3>
+          <!-- <p>HTML5, CSS3, JavaScript, React</p> -->
+        </div>
+
+        <div class="skill-card card-3d" data-tilt>
+          <div class="skill-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Backend</h3>
+          <!-- <p>Node.js, PHP, Python, Java</p> -->
+        </div>
+
+        <div class="skill-card card-3d" data-tilt>
+          <div class="skill-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile</h3>
+          <!-- <p>Flutter, React Native</p> -->
+        </div>
+
+        <div class="skill-card card-3d" data-tilt>
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Databases</h3>
+          <!-- <p>MySQL, MongoDB, Firebase</p> -->
+        </div>
+      </div>
+      <!-- Habilidades detalladas -->
+      <div class="skills-container">
+        <div class="skills-category">
+          <h3> Lenguajes de Programación</h3>
+          <div class="skills-grid">
+            <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill"><i class="fab fa-python"></i> Python</div>
+            <div class="skill"><i class="fab fa-dart"></i> Dart</div>
+            <div class="skill"><i class="fab fa-php"></i> PHP</div>
+            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill"><i class="fab fa-java"></i> Java</div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3> Frameworks</h3>
+          <div class="skills-grid">
+            <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+            <div class="skill"><i class="fab fa-react"></i> React</div>
+            <div class="skill"><i class="fab fa-node-js"></i> Node / Express</div>
+            <div class="skill"><i class="fab fa-laravel"></i> Laravel</div>
+            <div class="skill"><i class="fab fa-python"></i> Django</div>
+            <div class="skill"><i class="fab fa-flutter"></i> Flutter</div>
+          </div>
+        </div>
+
+        <div class="skills-category">
+          <h3> Bases de datos</h3>
+          <div class="skills-grid">
+            <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+            <div class="skill"><i class="fas fa-database"></i> PostgreSQL</div>
+            <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+            <div class="skill"><i class="fas fa-fire"></i> Firebase</div>
+            <div class="skill"><i class="fas fa-database"></i> SQLite</div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3> Herramientas & DevOps</h3>
+          <div class="skills-grid">
+            <div class="skill"><i class="fab fa-trello"></i> Trello</div>
+            <div class="skill"><i class="fas fa-tasks"></i> Taiga</div>
+            <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="skill"><i class="fab fa-github"></i> GitHub</div>
+            <div class="skill"><i class="fas fa-terminal"></i> Terminal</div>
+            <div class="skill"><i class="fas fa-palette"></i> Figma</div>
+          </div>
+          <div class="skills-category">
+            <h3>Sistemas Operativos</h3>
+            <div class="skills-grid">
+              <div class="skill"><i class="fab fa-windows"></i> Windows</div>
+              <div class="skill"><i class="fab fa-linux"></i> Linux</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-envelope"></i> Contacto</h2>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-left card-3d">
+          <h3>Envíame un mensaje</h3>
+          <p class="muted">¿Tienes un proyecto o quieres ver más? Contáctame.</p>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name"><i class="fas fa-user"></i> Nombre</label>
+              <input id="name" name="name" type="text" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope"></i> Email</label>
+              <input id="email" name="email" type="email" placeholder="Tu email" required>
+            </div>
+            <div class="form-group">
+              <label for="message"><i class="fas fa-comment"></i> Mensaje</label>
+              <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..."
+                required></textarea>
+            </div>
+            <div class="form-row">
+              <button class="btn primary" type="submit"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+            </div>
+            <p id="formMsg" class="muted small" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="contact-right card-3d">
+          <h3><i class="fas fa-address-card"></i> Información de contacto</h3>
+          <ul class="contact-info">
+            <li><i class="fas fa-map-marker-alt"></i> Quillacollo-Cochabamba, Bolivia</li>
+            <li><i class="fas fa-envelope"></i> <a href="plg39395@gmail.com">pplg39395@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/qr/NAOI2LSVZ64MA1">+591 77910962</a> </li>
+          </ul>
+
+          <h4> Redes sociales</h4>
+          <div class="social-links">
+            <a href="https://github.com/Guilder23" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" class="social-link"><i class="fab fa-linkedin"></i> Linkedin</a>
+            <!-- <a href="#" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i> Twitter</a> -->
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">GPL</div>
+        <div class="footer-text">
+          <p>© 2025 Guilder Paredes Lovera — Fullstack Developer</p>
+          <!-- <p class="muted small">Diseñado y desarrollado con <i class="fas fa-heart"></i></p> -->
+        </div>
+        <div class="footer-links">
+          <a href="#hero"><i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal for project detail
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content card-3d">
+      <button id="closeModal" class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalTech" class="muted small"></p>
+      <p id="modalDesc"></p>
+      <div class="modal-actions">
+        <a id="modalDemo" class="btn small" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Ver demo</a>
+        <a id="modalRepo" class="btn small outline" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Ver repo</a>
+      </div>
+    </div>
+  </div> --> <!-- Modal para detalle de proyectos -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content card-3d">
+      <button id="closeModal" class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalTech" class="muted small"></p>
+      <p id="modalDescText"></p>
+
+      <!-- Galería dinámica -->
+      <div id="modalGallery" class="modal-gallery"></div>
+
+      <!-- Controles -->
+      <!-- <div class="modal-controls">
+        <button id="prevImage" class="btn small outline"><i class="fas fa-chevron-left"></i></button>
+        <button id="nextImage" class="btn small outline"><i class="fas fa-chevron-right"></i></button>
+      </div> -->
+
+      <!-- Acciones -->
+      <div class="modal-actions">
+        <a id="modalDemo" class="btn small" href="#" target="_blank" rel="noopener"></i></a>
+        <a id="modalRepo" class="btn small outline" href="#" target="_blank" rel="noopener"></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cursor-container" id="cursor-container"></div>
+  <script src="app.js" defer></script>
+  <script src="cursor.js" defer></script>
+</body>
+
+</html>
