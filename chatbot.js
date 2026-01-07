@@ -281,6 +281,7 @@
     const chatbotInput = document.getElementById('chatbotInput');
     const chatbotSend = document.getElementById('chatbotSend');
     const chatMessages = document.querySelector('.chatbot-messages');
+    const whatsappButton = document.getElementById('whatsappButton');
 
     if (!chatbotToggle || !chatbotWindow) return;
 
@@ -288,6 +289,15 @@
     chatbotToggle.addEventListener('click', () => {
       chatbotWindow.classList.toggle('active');
       chatbotToggle.classList.toggle('active');
+      
+      // Controlar z-index del botón de WhatsApp
+      if (whatsappButton) {
+        if (chatbotWindow.classList.contains('active')) {
+          whatsappButton.classList.add('behind-modal');
+        } else {
+          whatsappButton.classList.remove('behind-modal');
+        }
+      }
       
       if (chatbotWindow.classList.contains('active')) {
         // Initialize with welcome message if empty
@@ -307,6 +317,11 @@
       chatbotClose.addEventListener('click', () => {
         chatbotWindow.classList.remove('active');
         chatbotToggle.classList.remove('active');
+        
+        // Restaurar z-index del botón de WhatsApp
+        if (whatsappButton) {
+          whatsappButton.classList.remove('behind-modal');
+        }
       });
     }
 
