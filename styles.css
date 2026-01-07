@@ -2273,3 +2273,64 @@ body.light .theme-toggle .fa-moon {
     font-size: 20px;
   }
 }
+
+/* ========== EMAIL SERVICE - MENSAJES DE FORMULARIO ========== */
+#formMsg {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+#formMsg.success {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981 !important;
+  font-weight: 600 !important;
+}
+
+#formMsg.error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444 !important;
+  font-weight: 600 !important;
+}
+
+#formMsg.info {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #6366f1 !important;
+}
+
+/* Animación para el botón de envío */
+.contact-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+}
+
+.contact-form button[type="submit"] .fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mejoras para validación de formulario */
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.contact-form input:valid:not(:placeholder-shown),
+.contact-form textarea:valid:not(:placeholder-shown) {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}

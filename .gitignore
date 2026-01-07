@@ -1,0 +1,56 @@
+# ====================================================
+# .gitignore - TuAppYaSoft
+# ====================================================
+
+# Variables de entorno (NO subir credenciales)
+.env
+.env.local
+.env.production
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (si usas npm en el futuro)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de build
+dist/
+build/
+.cache/
+
+# Netlify
+.netlify/
+
+# Logs
+logs/
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+
+# Backups
+*.bak
+backup/
+
+# Archivos de configuración privados
+config.private.js
+secrets.js
+credentials.json
+
+# Archivos de prueba locales
+test-local.html
+prueba-*.html
