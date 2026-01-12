@@ -153,7 +153,7 @@ body.light .theme-toggle .fa-moon {
   width: 56px;
   height: 56px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent2), var(--accent1));
+  background: transparent;
   display: grid;
   place-items: center;
   font-weight: 800;
