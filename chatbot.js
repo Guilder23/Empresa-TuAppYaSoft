@@ -302,7 +302,7 @@
       if (chatbotWindow.classList.contains('active')) {
         // Initialize with welcome message if empty
         if (chatMessages.children.length === 0) {
-          addMessage('¡Hola! 👋 Soy el asistente virtual de TuAppYaSoft.', false, true);
+          addMessage('¡Hola! 👋 Soy el asistente virtual de AppYaa.', false, true);
           setTimeout(() => {
             addMessage('Estoy aquí para responder tus preguntas sobre nuestros servicios, precios y más. ¿En qué puedo ayudarte?', false, true);
             setTimeout(() => showQuickQuestions(), 500);
