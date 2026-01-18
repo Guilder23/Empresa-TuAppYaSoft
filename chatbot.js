@@ -53,7 +53,7 @@
     },
     'saludo': {
     question: 'Hola',
-    answer: '¡Hola! 👋 Bienvenido a <strong>TuAppYaSoft</strong>.<br><br>Estoy aquí para ayudarte con información sobre precios, servicios, tiempos de entrega y más.<br><br>¿Qué te gustaría saber? 😊'
+    answer: '¡Hola! 👋 Bienvenido a <strong>AppYaa</strong>.<br><br>Estoy aquí para ayudarte con información sobre precios, servicios, tiempos de entrega y más.<br><br>¿Qué te gustaría saber? 😊'
     },
     'despedida': {
     question: 'Adiós',
@@ -302,7 +302,7 @@
       if (chatbotWindow.classList.contains('active')) {
         // Initialize with welcome message if empty
         if (chatMessages.children.length === 0) {
-          addMessage('¡Hola! 👋 Soy el asistente virtual de TuAppYaSoft.', false, true);
+          addMessage('¡Hola! 👋 Soy el asistente virtual de AppYaa.', false, true);
           setTimeout(() => {
             addMessage('Estoy aquí para responder tus preguntas sobre nuestros servicios, precios y más. ¿En qué puedo ayudarte?', false, true);
             setTimeout(() => showQuickQuestions(), 500);
