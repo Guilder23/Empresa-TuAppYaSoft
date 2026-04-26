@@ -18,7 +18,7 @@
   <header class="site-header">
     <div class="brand">
       <div class="logo">
-        <img src="assets/ALogoEmpresa.png" alt="Logo AppYaa" style="height: 48px; width: auto;">
+        <a href="index.html#inicio" aria-label="Ir al inicio"><img src="assets/ALogoEmpresa.png" alt="Logo AppYaa" style="height: 48px; width: auto;"></a>
       </div>
       <div class="who">
         <h1>AppYaa</h1>
@@ -30,7 +30,7 @@
       <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
       <a href="#servicios"><i class="fas fa-briefcase"></i> Servicios</a>
       <a href="#precios"><i class="fas fa-tags"></i> Precios</a>
-      <a href="#proyectos"><i class="fas fa-laptop-code"></i> Portafolio</a>
+      <a href="projects.html"><i class="fas fa-laptop-code"></i> Portafolio</a>
       <a href="#nosotros"><i class="fas fa-users"></i> Nosotros</a>
       <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
@@ -404,175 +404,16 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="proyectos" class="section">
+    <!-- Portafolio moved to separate page -->
+    <!-- <section id="proyectos" class="section">
       <div class="section-header">
-        <h2><i class="fas fa-laptop-code"></i> Algunos Proyectos</h2>
-        <div class="filters">
-          <button class="filter active" data-filter="all">Todos</button>
-          <button class="filter" data-filter="web">Web</button>
-          <button class="filter" data-filter="mobile">Mobile</button>
-          <button class="filter" data-filter="ecommerce">Ecommerce</button>
-          <button class="filter" data-filter="mvp">MVP</button>
-        </div>
+        <h2><i class="fas fa-laptop-code"></i> Portafolio</h2>
+        <p class="section-subtitle">Ver todos nuestros proyectos en una página dedicada.</p>
       </div>
-
-      <div id="projectsGrid" class="projects-grid">
-        <!-- Project cards (data-* attributes used for filtering and details) -->
-        <!-- <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales" data-tech="React, Node, PostgreSQL" data-desc="Tienda online con catálogo, carrito, pasarela de pago y panel administrativo.">
-          <div class="p-thumb" style="background-image:url('assets/contruccion1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-shopping-cart"></i> Ecommerce de materiales</h4>
-            <p class="muted"><i class="fab fa-react"></i> React • <i class="fab fa-node-js"></i> Node • <i class="fas fa-database"></i> PostgreSQL</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </article> -->
-        <article class="project card-3d" data-tags="mvp " data-title="Sistema de inscripciones"
-          data-tech="Laravel,php, MySQL"
-          data-desc="Sistema integral de inscripciones para olimpiadas OH-SANSI desarrollado en 2025. Plataforma multi-rol con autenticación segura para estudiantes, docentes y administradores. Estudiantes pueden auto-inscribirse en competencias,
-           mientras docentes inscriben grupos completos. Panel administrativo avanzado para gestión de usuarios, colegios, áreas académicas, categorías por edad/nivel y competencias. Sistema completo de pagos integrado con generación automática de
-            reportes financieros en PDF. Dashboard ejecutivo con gráficos dinámicos en tiempo real: métricas de inscripciones por categoría, colegios participantes, estados de pago y estadísticas de participación. Módulo de reportes personalizables
-             con exportación a PDF para análisis y documentación oficial."
-          data-images="assets/sansi10.png,assets/sansi7.png,assets/sansi2.png, assets/sansi3.png, assets/sansi4.png, assets/sansi5.png,assets/sansi6.png,assets/sansi8.png,assets/sansi9.png ">
-
-          <div class="p-thumb" style="background-image:url('assets/sansi1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sitema de inscripcion Oh-SANSI</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Laravel • <i class="fas fa-database"></i> MySQL • <i
-                class="fab fa-php"></i>PHP</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
-            </div>
-          </div>
-        </article>
-        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales educativos"
-          data-tech="Python, PostgreSQL" data-desc="Plataforma educativa integral de marketplace. Sistema de autenticación completo (registro, login). Los usuarios pueden 
-          completar su perfil profesional, publicar material educativo para la venta (apuntes, guías, recursos) y comprar productos de otros educadores. Carrito de compras.
-           Sistema de pagos integrado con código QR para transacciones seguras. Panel personalizado para ver historial de compras y ventas, gestionar productos publicados 
-          y estado de pedidos. Sistema de notificaciones en tiempo real para actualizaciones de comprar o ventas. Dashboard con métricas de rendimiento para vendedores.Desarrollado en 2025"
-          data-images="assets/biblioteca1.png,assets/biblioteca2.png,assets/biblioteca3.png,assets/biblioteca4.png,assets/biblioteca5.png,assets/biblioteca6.png,assets/biblioteca7.png ">
-
-          <div class="p-thumb" style="background-image:url('assets/biblioteca1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema de venta y compra de materiales educativos</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i
-                class="fab fa-python"></i>Python</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
-            </div>
-          </div>
-        </article>
-        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales"
-          data-tech="django, SQLite" data-desc="E-commerce especializado en materiales de construcción. Sistema completo de autenticación
-           (registro, login). Búsqueda avanzada con múltiples filtros por categoría, precio, marca y especificaciones técnicas. Los usuarios
-            pueden gestionar su perfil, publicar productos para la venta y editar sus publicaciones después de subirlas. Carrito de compras. 
-            Sistema de pago simulado para transacciones de prueba.Desarrollado en 2024"
-          data-images="assets/construccion1.png,assets/construccion2.png,assets/construccion3.png ">
-
-          <div class="p-thumb" style="background-image:url('assets/construccion1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema compra y venta de material de construccion</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> SQLite <i class="fab fa-bootstrap"></i>• Bootstrap <i class="fab fa-python"></i> •
-              Python</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
-            </div>
-          </div>
-        </article>
-
-        <article class="project card-3d" data-tags="mobile flutter" data-title="App Flutter — Reserva de asientos"
-          data-tech="Flutter, Firebase, Dart"
-          data-desc="App Android completa para reservas de cine. Sistema de autenticación (registro y login). Los usuarios pueden explorar cartelera completa con 
-          detalles de películas: sinopsis, reparto de actores, duración, género, tráilers y valoraciones. Selección visual interactiva de butacas con mapa del cine en 
-          tiempo real. Gestión de horarios y fechas de funciones. Sistema de compra integrado: reserva de entradas, adición de productos de confitería (combo, palomitas, bebidas) 
-          y pago simulado. Historial detallado de compras con opción de descargar comprobantes en PDF y compartir reservas. Sección de próximos estrenos.Desarrollado en 2024.
-           Persistencia de datos local y sincronización en la nube.""
-          data-images="assets/cine1.png,assets/cine2.png,assets/cine3.png">
-
-          <div class="p-thumb" style="background-image:url('assets/cine1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-mobile-alt"></i> App Flutter — Reserva de asientos CINE</h4>
-            <p class="muted"><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i>Firebase •
-              <i>Dart</i>
-            </p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
-            </div>
-          </div>
-        </article>
-        <article class="project card-3d" data-tags="web admin" data-title="Plataforma de asistencia"
-          data-tech="Laravel, MySQL"
-          data-desc="Sistema integral de control de asistencia y productividad para personal de una Fundacion. Gestión multi-rol: becarios,
-           promotores y jefes de zona. Registro de entrada/salida mediante número de carnet con descripción detallada de actividades
-            realizadas. Monitoreo en tiempo real del personal activo, tiempo trabajado diario y horarios de salida. Panel administrativo
-             para visualizar todos los usuarios registrados y su estado actual. Generación de reportes PDF por rangos de fechas personalizables, 
-             incluyendo resúmenes de horas trabajadas, actividades realizadas. Exportación de datos para análisis externo. Desarrollado en 2023"
-          data-images="assets/asistencia1.png,assets/asistencia2.png ">
-
-          <div class="p-thumb" style="background-image:url('assets/asistencia1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i> Plataforma de asistencia</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> MySQL</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <!-- <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a> -->
-            </div>
-          </div>
-        </article>
-
-        <article class="project card-3d" data-tags="web mvp realtime" data-title="Mini Red social"
-          data-tech="React, Django,, Python,SQLite"
-          data-desc="Proyecto académico - Red social universitaria (MVP de práctica). Sistema de autenticación completo para registro y login.
-           Funcionalidades implementadas: publicaciones con texto e imágenes, sistema de 'me gusta' y comentarios, gestión de amigos y seguidores, 
-           chat en tiempo real entre usuarios, y estados efímeros. Desarrollado como ejercicio práctico para aplicar conceptos de desarrollo fullstack,
-            bases de datos relacionales. No desplegado en producción. Desarrolado en 2023"
-          data-images="assets/RedSocial1.png">
-
-          <div class="p-thumb" style="background-image:url('assets/RedSocial1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-users"></i> Mini Red social</h4>
-            <p class="muted"><i class="fab fa-react"></i> React+Django • <i class="fas fa-fire"></i>SQLite • python</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <a class="btn small" href="#" target="_blank" rel="noopener"></a>
-            </div>
-          </div>
-        </article>
-        <!-- 
-
-        <article class="project card-3d" data-tags="web mvp realtime" data-title="Red social universitaria" data-tech="React, Firebase" data-desc="MVP de red social con perfiles, publicaciones y comentarios para estudiantes.">
-          <div class="p-thumb" style="background-image:url('assets/project3.jpg');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-users"></i> Red social universitaria</h4>
-            <p class="muted"><i class="fab fa-react"></i> React • <i class="fas fa-fire"></i> Firebase</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project card-3d" data-tags="mobile flutter" data-title="App Flutter — Reserva de asientos" data-tech="Flutter, SQLite" data-desc="App Android para reservar asientos con selección visual y persistencia local y remota.">
-          <div class="p-thumb" style="background-image:url('assets/project4.jpg');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-mobile-alt"></i> App Flutter — Reserva de asientos</h4>
-            <p class="muted"><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i> SQLite</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-              <a class="btn small" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i> Repo</a>
-            </div>
-          </div>
-        </article>
+      <div class="section-cta">
+        <a href="projects.html" class="btn primary large"><i class="fas fa-external-link-alt"></i> Ver Portafolio Completo</a>
       </div>
     </section> -->
-    </section>
 
     <!-- About Us / Nosotros Section -->
     <section id="nosotros" class="section about-us animate-on-scroll">

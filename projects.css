@@ -1,0 +1,45 @@
+/* styles específicos para la página de proyectos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.project {
+  overflow: hidden;
+}
+.p-thumb {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px 8px 0 0;
+}
+.project .project-content {
+  padding: 0.9rem;
+}
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.filter {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--muted-border, rgba(255,255,255,0.06));
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.filter.active {
+  background: var(--primary, #2f7be2);
+  color: #fff;
+}
+.section-cta { text-align: center; margin: 2rem 0; }
+
+/* Modal gallery basic */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); align-items:center; justify-content:center; z-index:40; }
+.modal[aria-hidden="false"] { display:flex; }
+.modal-content { max-width:900px; width:100%; padding:1.25rem; }
+
+@media (max-width: 640px) {
+  .p-thumb { height: 120px; }
+}
