@@ -6,6 +6,45 @@
   margin-top: 12px;
 }
 
+.tech-images-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 8px 0 24px;
+}
+
+.tech-image-card {
+  background: var(--card);
+  border: 1px solid var(--glass);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tech-image-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.tech-image-card p {
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .tech-page .skills-cards {
   margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .tech-images-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-images-grid {
+    grid-template-columns: 1fr;
+  }
 }

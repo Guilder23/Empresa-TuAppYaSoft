@@ -27,9 +27,76 @@
     });
   }
 
+  // ==================== TYPING EFFECT HERO ====================
+  const typingTarget = document.getElementById('typingText');
+  const typingPrefix = document.getElementById('typingPrefix');
+  if (typingTarget) {
+    const prefixText = (typingPrefix?.dataset.prefix || '').trim();
+    const words = (typingTarget.dataset.words || 'AppYaa')
+      .split(',')
+      .map(word => word.trim())
+      .filter(Boolean);
+
+    if (words.length > 0) {
+      const typePrefixOnce = (done) => {
+        if (!typingPrefix || !prefixText) return done();
+        let i = 0;
+        const tick = () => {
+          i += 1;
+          typingPrefix.textContent = prefixText.slice(0, i);
+          if (i >= prefixText.length) return done();
+          setTimeout(tick, 45);
+        };
+        typingPrefix.textContent = '';
+        tick();
+      };
+
+      let wordIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      const typeLoop = () => {
+        const currentWord = words[wordIndex];
+
+        if (deleting) {
+          charIndex = Math.max(charIndex - 1, 0);
+        } else {
+          charIndex = Math.min(charIndex + 1, currentWord.length);
+        }
+
+        typingTarget.textContent = currentWord.slice(0, charIndex);
+
+        let delay = deleting ? 50 : 90;
+        if (!deleting && charIndex === currentWord.length) {
+          delay = 1400;
+          deleting = true;
+        } else if (deleting && charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          delay = 300;
+        }
+
+        setTimeout(typeLoop, delay);
+      };
+
+      typingTarget.textContent = '';
+      typePrefixOnce(() => setTimeout(typeLoop, 250));
+    }
+  }
+
   // ==================== MOBILE MENU TOGGLE ====================
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const nav = document.querySelector('.nav');
+  
+  // Función para cerrar el menú
+  const closeNav = () => {
+    if (nav && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      const icon = mobileMenuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  };
   
   if (mobileMenuToggle && nav) {
     mobileMenuToggle.addEventListener('click', () => {
@@ -41,6 +108,15 @@
       } else {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('active') && 
+          !nav.contains(e.target) && 
+          !mobileMenuToggle.contains(e.target)) {
+        closeNav();
       }
     });
   }
@@ -334,20 +410,41 @@
   }
 
   // ==================== HEADER SCROLL EFFECT ====================
-  let lastScroll = 0;
+  let lastScroll = window.pageYOffset || 0;
   const header = document.querySelector('.site-header');
+  const SCROLL_DELTA = 8;
   
   window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+    if (!header) return;
+
+    const currentScroll = window.pageYOffset || 0;
     
     if (currentScroll > 100) {
       header.style.padding = '12px 20px';
     } else {
       header.style.padding = '16px 24px';
     }
+
+    if (currentScroll <= 12) {
+      header.classList.remove('header-hidden');
+      lastScroll = currentScroll;
+      return;
+    }
+
+    const scrollDiff = currentScroll - lastScroll;
+    if (Math.abs(scrollDiff) < SCROLL_DELTA) {
+      return;
+    }
+
+    // Bajando => ocultar | Subiendo => mostrar
+    if (scrollDiff > 0) {
+      header.classList.add('header-hidden');
+    } else {
+      header.classList.remove('header-hidden');
+    }
     
     lastScroll = currentScroll;
-  });
+  }, { passive: true });
 
   // ==================== FLOATING ANIMATION ====================
   const floatingCards = document.querySelectorAll('.floating-card');

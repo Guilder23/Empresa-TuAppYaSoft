@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   const filters = document.querySelectorAll('.filter');
   const projects = document.querySelectorAll('.project');
+  const projectsGrid = document.getElementById('projectsGrid');
+  let rotationTimer = null;
+  let currentProjectIndex = 0;
 
   filters.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -14,8 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
           p.style.display = '';
         } else {
           p.style.display = 'none';
+          p.classList.remove('is-focused');
         }
       });
+
+      // Reinicia la rotación tomando solo los proyectos visibles
+      currentProjectIndex = 0;
+      startAutoRotation();
     });
   });
 
@@ -26,6 +34,40 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalDesc = document.getElementById('modalDescText');
   const modalGallery = document.getElementById('modalGallery');
   const closeModal = document.getElementById('closeModal');
+  
+  function getVisibleProjects() {
+    return Array.from(projects).filter(p => p.style.display !== 'none');
+  }
+
+  function focusProject(project) {
+    projects.forEach(p => p.classList.remove('is-focused'));
+    if (!project) return;
+    project.classList.add('is-focused');
+    project.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+  }
+
+  function rotateProject() {
+    const visibleProjects = getVisibleProjects();
+    if (!visibleProjects.length) return;
+    currentProjectIndex = currentProjectIndex % visibleProjects.length;
+    focusProject(visibleProjects[currentProjectIndex]);
+    currentProjectIndex = (currentProjectIndex + 1) % visibleProjects.length;
+  }
+
+  function stopAutoRotation() {
+    if (rotationTimer) {
+      clearInterval(rotationTimer);
+      rotationTimer = null;
+    }
+  }
+
+  function startAutoRotation() {
+    stopAutoRotation();
+    const visibleProjects = getVisibleProjects();
+    if (visibleProjects.length <= 1) return;
+    rotateProject();
+    rotationTimer = setInterval(rotateProject, 4000);
+  }
 
   document.querySelectorAll('.view-project').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -46,10 +88,26 @@ document.addEventListener('DOMContentLoaded', function () {
         d.style.marginBottom = '0.5rem';
         modalGallery.appendChild(d);
       });
+      stopAutoRotation();
       modal.setAttribute('aria-hidden', 'false');
     });
   });
 
-  if (closeModal) closeModal.addEventListener('click', () => modal.setAttribute('aria-hidden', 'true'));
-  modal.addEventListener('click', (e) => { if (e.target === modal) modal.setAttribute('aria-hidden', 'true'); });
+  function closeProjectModal() {
+    modal.setAttribute('aria-hidden', 'true');
+    startAutoRotation();
+  }
+
+  if (closeModal) closeModal.addEventListener('click', closeProjectModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeProjectModal();
+  });
+
+  // Pausa cuando el usuario interactúa con la grilla, reanuda al salir
+  if (projectsGrid) {
+    projectsGrid.addEventListener('mouseenter', stopAutoRotation);
+    projectsGrid.addEventListener('mouseleave', startAutoRotation);
+  }
+
+  startAutoRotation();
 });

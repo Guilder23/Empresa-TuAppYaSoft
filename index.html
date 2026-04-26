@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="assets/ALogoEmpresa.png">
 </head>
 
-<body class="dark">
+<body class="dark home-hero-behind-header">
   <header class="site-header">
     <div class="brand">
       <div class="logo">
@@ -47,12 +47,15 @@
 
   <main class="container">
     <!-- Hero Section -->
-    <section class="hero animate-on-scroll" id="inicio">
+    <section class="hero hero-full-image animate-on-scroll" id="inicio">
+      <div class="hero-overlay-image card-3d">
+        <img src="assets/aindex/imgencima.png" alt="Vista previa de proyecto tecnológico">
+      </div>
       <div class="hero-left card-3d">
-        <div class="hero-badge">
+        <!-- <div class="hero-badge">
           <i class="fas fa-award"></i> Soluciones Digitales de Calidad
-        </div>
-        <h2 class="hero-title">Transforma Tu Negocio Con <span class="accent gradient-text">Software Profesional</span></h2>
+        </div> -->
+        <h2 class="hero-title"><span id="typingPrefix" class="typing-prefix" data-prefix="Transforma Tu Negocio Con"></span> <span class="accent gradient-text typing-text" id="typingText" data-words="AppYaa,Software Profesional,Páginas Web Modernas,Sistemas a Medida">AppYaa</span></h2>
         <p class="lead">Desarrollamos páginas web y aplicaciones a medida para impulsar tu negocio. Desde sitios web estáticos hasta plataformas dinámicas complejas, e-commerce y sistemas personalizados. <strong>Calidad profesional a precios accesibles.</strong></p>
         
         <div class="hero-features">
@@ -104,25 +107,6 @@
         </div>
       </div>
 
-      <aside class="hero-right card-3d" data-tilt>
-        <div class="hero-image-container">
-          <div class="floating-card card-1">
-            <i class="fas fa-code"></i>
-            <span>Código Limpio</span>
-          </div>
-          <div class="floating-card card-2">
-            <i class="fas fa-mobile-alt"></i>
-            <span>Mobile First</span>
-          </div>
-          <div class="floating-card card-3">
-            <i class="fas fa-bolt"></i>
-            <span>Alta Velocidad</span>
-          </div>
-          <div class="hero-illustration">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-        </div>
-      </aside>
     </section>
 
     <!-- Services Section -->
@@ -406,7 +390,7 @@
     </section>
 
     <!-- About Us / Nosotros Section -->
-    <section class="section">
+    <!-- <section class="section">
       <div class="section-header">
         <h2><i class="fas fa-users"></i> Sobre Nosotros</h2>
         <p class="section-subtitle">Conoce más sobre AppYaa en una página dedicada</p>
@@ -414,7 +398,7 @@
       <div class="section-cta">
         <a href="pages/nosotros.html" class="btn primary large"><i class="fas fa-external-link-alt"></i> Ver Nosotros</a>
       </div>
-    </section>
+    </section> -->
 
     <!-- Contact Section -->
     <section id="contacto" class="section contact-section animate-on-scroll">
