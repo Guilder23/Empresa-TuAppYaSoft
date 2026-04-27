@@ -228,6 +228,16 @@ body.light .theme-toggle .fa-moon {
   font-size: 14px;
 }
 
+/* Navbar en modo claro */
+body.light .nav a {
+  color: var(--muted);
+}
+
+body.light .nav a:hover {
+  color: var(--text-bright);
+  background: rgba(0,0,0,0.08);
+}
+
 .mobile-menu-toggle {
   display: none;
   background: var(--glass);
@@ -445,17 +455,11 @@ body.home-hero-behind-header .hero.hero-full-image {
 }
 
 body.home-hero-behind-header .site-header {
-  background: rgba(7, 16, 33, 0.55);
+  background: transparent;
   backdrop-filter: blur(14px);
 }
 
 body.dark.home-hero-behind-header .site-header {
-  background: rgba(7, 16, 33, 0.8);
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-/* En home, modo claro mantiene estética tipo modo oscuro */
-body.light.home-hero-behind-header .site-header {
   background: rgba(7, 16, 33, 0.8);
   border-color: rgba(255, 255, 255, 0.12);
 }
@@ -1623,18 +1627,20 @@ body.light.home-hero-behind-header .hero.hero-full-image .hero-left {
 .modal-gallery {
   margin: 20px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 15px;
 }
 
 .gallery-image {
   width: 100%;
-  height: 150px;
+  height: auto;
   border-radius: var(--radius);
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  background: var(--card);
 }
 
 .gallery-image:hover {
