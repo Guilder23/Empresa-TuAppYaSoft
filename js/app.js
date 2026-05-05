@@ -259,7 +259,7 @@
           p.style.transform = 'translateY(20px)';
           setTimeout(() => {
             p.style.display = 'none';
-          }, 300);
+          }, 1200);
         }
       });
     }));
