@@ -4,26 +4,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Nosotros — AppYaa</title>
-  <meta name="description" content="Sobre Nosotros — AppYaa" />
+  <title>Sobre Nosotros — AppYaaSoft</title>
+  <meta name="description" content="Conoce al equipo de AppYaaSoft: desarrollo de software y páginas web de calidad con precios accesibles y enfoque profesional." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/nosotros.css">
+  <link rel="stylesheet" href="../css/chatbot.css">
+  <link rel="stylesheet" href="../css/cursor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../assets/ALogoEmpresa.png">
 </head>
 
 <body class="dark">
   <header class="site-header">
-    <div class="brand">
+    <a href="../index.html#inicio" class="brand" aria-label="Ir al inicio">
       <div class="logo">
-        <a href="../index.html#inicio" aria-label="Ir al inicio"><img src="../assets/ALogoEmpresa.png" alt="Logo AppYaa" style="height: 48px; width: auto;"></a>
+        <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
       </div>
       <div class="who">
         <h1>AppYaa</h1>
-        <p class="muted">Desarrollo de Software Profesional</p>
+        <p class="muted">Desarrollo Profesional</p>
       </div>
-    </div>
+    </a>
 
     <nav class="nav">
       <a href="../index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
@@ -31,127 +33,240 @@
       <a href="../index.html#precios"><i class="fas fa-tags"></i> Precios</a>
       <a href="projects.html"><i class="fas fa-laptop-code"></i> Portafolio</a>
       <a href="tecnologias.html"><i class="fas fa-tools"></i> Tecnologías</a>
-      <a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
+      <a href="nosotros.html" class="active"><i class="fas fa-users"></i> Nosotros</a>
       <a href="../index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
-      <!-- Theme Toggle Button -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </button>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <main class="container about-page">
-    <section class="section" id="nosotros">
-      <div class="section-header">
+    <section class="about-hero" id="nosotros">
+      <div class="about-hero-text">
         <h2><i class="fas fa-users"></i> Sobre Nosotros</h2>
-        <p class="section-subtitle">Un equipo comprometido con tu éxito digital</p>
+        <p>En <strong>AppYaaSoft</strong> transformamos ideas en plataformas digitales de alto impacto. Creamos páginas web, tiendas online y software a medida combinando calidad técnica, diseño moderno y precios adaptables para impulsar tu negocio.</p>
       </div>
+      <div class="about-hero-image">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=80" alt="Equipo de desarrollo de software profesional">
+      </div>
+    </section>
 
-      <div class="about-content">
-        <div class="about-text-section">
-          <h3><i class="fas fa-rocket"></i> Nuestra Misión</h3>
-          <p>En <strong>AppYaa</strong>, transformamos ideas en realidades digitales. Somos una empresa de desarrollo de software especializada en crear soluciones web profesionales y accesibles para todo tipo de negocios.</p>
+    <!-- Cinta Infinita de Especialidades -->
+    <div class="infinite-marquee-ribbon" style="margin-bottom: 24px;">
+      <div class="marquee-inner">
+        <div class="marquee-content">
+          <span class="m-item"><i class="fas fa-star"></i> INNOVACIÓN</span>
+          <span class="m-item"><i class="fas fa-check-double"></i> CÓDIGO LIMPIO</span>
+          <span class="m-item"><i class="fas fa-users"></i> COMPROMISO REAL</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> MÁXIMA SEGURIDAD</span>
+          <span class="m-item"><i class="fas fa-rocket"></i> ALTO IMPACTO</span>
+          <span class="m-item"><i class="fas fa-clock"></i> ENTREGAS PUNTUALES</span>
+          <span class="m-item"><i class="fas fa-star"></i> INNOVACIÓN</span>
+          <span class="m-item"><i class="fas fa-check-double"></i> CÓDIGO LIMPIO</span>
+          <span class="m-item"><i class="fas fa-users"></i> COMPROMISO REAL</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> MÁXIMA SEGURIDAD</span>
+          <span class="m-item"><i class="fas fa-rocket"></i> ALTO IMPACTO</span>
+          <span class="m-item"><i class="fas fa-clock"></i> ENTREGAS PUNTUALES</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="m-item"><i class="fas fa-star"></i> INNOVACIÓN</span>
+          <span class="m-item"><i class="fas fa-check-double"></i> CÓDIGO LIMPIO</span>
+          <span class="m-item"><i class="fas fa-users"></i> COMPROMISO REAL</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> MÁXIMA SEGURIDAD</span>
+          <span class="m-item"><i class="fas fa-rocket"></i> ALTO IMPACTO</span>
+          <span class="m-item"><i class="fas fa-clock"></i> ENTREGAS PUNTUALES</span>
+          <span class="m-item"><i class="fas fa-star"></i> INNOVACIÓN</span>
+          <span class="m-item"><i class="fas fa-check-double"></i> CÓDIGO LIMPIO</span>
+          <span class="m-item"><i class="fas fa-users"></i> COMPROMISO REAL</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> MÁXIMA SEGURIDAD</span>
+          <span class="m-item"><i class="fas fa-rocket"></i> ALTO IMPACTO</span>
+          <span class="m-item"><i class="fas fa-clock"></i> ENTREGAS PUNTUALES</span>
+        </div>
+      </div>
+    </div>
 
-          <p>Creemos que <strong>toda empresa merece tener presencia digital de calidad</strong>, sin importar su tamaño o presupuesto. Por eso ofrecemos servicios profesionales a precios accesibles y charlables, con planes de pago flexibles que se adaptan a tus necesidades.</p>
+    <!-- Composición Geométrica Moderna (Estilo Visual Esencia) -->
+    <section class="section modern-essence-section" style="padding-top: 0; margin-bottom: 24px;">
+      <div class="essence-grid">
+        <!-- Composición Visual Izquierda -->
+        <div class="geo-composition-wrapper">
+          <div class="geo-circle-backdrop"></div>
 
-          <h3 class="mt-4"><i class="fas fa-bullseye"></i> ¿Por Qué Elegirnos?</h3>
-          <div class="why-choose-grid">
-            <div class="why-item">
-              <i class="fas fa-dollar-sign"></i>
+          <div class="geo-card-main">
+            <div class="geo-card-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>Nuestra Esencia</h3>
+            <p>Pasión por el código y la innovación constante. Desarrollamos software que transforma negocios y conecta a las personas con experiencias digitales fluidas.</p>
+          </div>
+
+          <div class="geo-badge-square">
+            <div class="geo-square-icon"><i class="fas fa-award"></i></div>
+            <strong>Excelencia</strong>
+            <span>Gestión & Calidad</span>
+          </div>
+
+          <div class="geo-badge-circle">
+            <strong>100%</strong>
+            <span>COMPROMISO</span>
+          </div>
+        </div>
+
+        <!-- Pilares 2x2 Derecha -->
+        <div class="essence-content">
+          <span class="essence-tag">— FILOSOFÍA & VALORES</span>
+          <h2>Más que un equipo técnico, una <span class="gradient-text">familia de desarrollo</span></h2>
+          <p class="essence-desc">Nuestra misión es democratizar el software de alta gama para que cualquier emprendimiento u organización cuente con sistemas de primer nivel mundial.</p>
+
+          <div class="essence-pillars-grid">
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
               <div>
-                <h4>Precios Accesibles</h4>
-                <p>Calidad profesional sin romper tu presupuesto. Precios justos y charlables.</p>
+                <h4>Misión</h4>
+                <p>Construir plataformas digitales sólidas que brinden una experiencia inolvidable a tus usuarios.</p>
               </div>
             </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-eye"></i></div>
+              <div>
+                <h4>Visión</h4>
+                <p>Ser reconocidos por nuestra calidez humana, excelencia técnica y resultados comerciales medibles.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-gift"></i></div>
+              <div>
+                <h4>Valores & Garantía</h4>
+                <p>Transparencia, código limpio, documentación rigurosa y soporte permanente.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <h4>Convenios & Alianzas</h4>
+                <p>Planes flexibles y beneficios exclusivos para emprendedores y empresas aliadas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="about-grid">
+      <div class="about-main-card">
+        <div>
+          <h3 class="about-section-title"><i class="fas fa-check-circle"></i> ¿Por Qué Elegir AppYaaSoft?</h3>
+          <div class="why-choose-grid">
+            <div class="why-item">
+              <i class="fas fa-hand-holding-usd"></i>
+              <div>
+                <h4>Precios Accesibles</h4>
+                <p>Presupuestos justos y planes flexibles que se ajustan a tu negocio.</p>
+              </div>
+            </div>
+
             <div class="why-item">
               <i class="fas fa-code"></i>
               <div>
-                <h4>Código de Calidad</h4>
-                <p>Desarrollamos con las mejores prácticas y tecnologías modernas.</p>
+                <h4>Código Limpio</h4>
+                <p>Desarrollo con buenas prácticas, tecnologías modernas y alto rendimiento.</p>
               </div>
             </div>
+
             <div class="why-item">
               <i class="fas fa-clock"></i>
               <div>
                 <h4>Entregas Puntuales</h4>
-                <p>Cumplimos con los plazos acordados sin sacrificar calidad.</p>
+                <p>Compromiso riguroso con plazos y metodologías ágiles de trabajo.</p>
               </div>
             </div>
+
             <div class="why-item">
               <i class="fas fa-headset"></i>
               <div>
                 <h4>Soporte Continuo</h4>
-                <p>Estamos contigo después del lanzamiento con soporte dedicado.</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <i class="fas fa-mobile-alt"></i>
-              <div>
-                <h4>Diseño Responsive</h4>
-                <p>Tu sitio se verá perfecto en todos los dispositivos.</p>
-              </div>
-            </div>
-            <div class="why-item">
-              <i class="fas fa-chart-line"></i>
-              <div>
-                <h4>SEO Optimizado</h4>
-                <p>Te ayudamos a ser encontrado en Google y otros buscadores.</p>
+                <p>Acompañamiento técnico y mantenimiento pos-lanzamiento.</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="stats-section">
-          <div class="stat-box">
+      <aside class="about-side">
+        <div class="stats-grid">
+          <div class="stat-card">
             <i class="fas fa-award"></i>
-            <div class="stat-number" data-target="3">3</div>
-            <div class="stat-label">Años de Experiencia</div>
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Años Experiencia</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-card">
             <i class="fas fa-project-diagram"></i>
-            <div class="stat-number" data-target="100">100</div>
-            <div class="stat-label">Proyectos Completados</div>
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Proyectos</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-card">
             <i class="fas fa-smile"></i>
-            <div class="stat-number" data-target="50">50</div>
-            <div class="stat-label">Clientes Felices</div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Clientes Satisfechos</div>
           </div>
-          <div class="stat-box">
+          <div class="stat-card">
             <i class="fas fa-star"></i>
-            <div class="stat-number" data-target="5">5.0</div>
-            <div class="stat-label">Calificación Promedio</div>
+            <div class="stat-number">5.0</div>
+            <div class="stat-label">Calificación</div>
           </div>
         </div>
-      </div>
 
-      <div class="about-image-gallery">
-        <article class="about-gallery-item card-3d">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80" alt="Equipo desarrollando software y soluciones web">
-          <h4><i class="fas fa-laptop-code"></i> Desarrollo Web</h4>
-        </article>
-        <article class="about-gallery-item card-3d">
-          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Proyecto tecnológico en producción">
-          <h4><i class="fas fa-layer-group"></i> Arquitectura de Proyectos</h4>
-        </article>
-        <article class="about-gallery-item card-3d">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Aplicación social desarrollada por AppYaa">
-          <h4><i class="fas fa-users-cog"></i> Productos Digitales</h4>
-        </article>
-      </div>
-    </section>
+        <div class="profile-card">
+          <div class="profile-img-wrap">
+            <img src="../GuilderFotoPerfil.jpg" alt="Guilder Paredes" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop'">
+          </div>
+          <div class="profile-info">
+            <h4>Guilder Paredes</h4>
+            <span class="profile-badge">Lead Developer & Fundador</span>
+            <p>Especialista en desarrollo web, arquitecturas backend y aplicaciones móviles centradas en resultados.</p>
+            <div class="profile-links">
+              <a href="https://github.com/Guilder23" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/guilder-paredes-lovera-002a7637b" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://wa.me/59177910962" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="about-gallery">
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Desarrollo Web Profesional">
+        <h4><i class="fas fa-laptop-code"></i> Desarrollo Web Full-Stack</h4>
+      </article>
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Arquitectura de Sistemas">
+        <h4><i class="fas fa-layer-group"></i> Arquitectura & Bases de Datos</h4>
+      </article>
+      <article class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Aplicaciones Móviles y Software">
+        <h4><i class="fas fa-mobile-alt"></i> Apps Móviles & Sistemas a Medida</h4>
+      </article>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="../assets/ALogoEmpresa.png" alt="Logo TuAppYaSoft" style="height: 48px; width: auto;">
+            <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
           </div>
-          <h3>TuApp<span class="highlight">YaSoft</span></h3>
+          <h3>AppYaa<span class="highlight">Soft</span></h3>
           <p class="muted">Desarrollo de software profesional para impulsar tu negocio al siguiente nivel.</p>
           <div class="footer-socials">
             <a href="https://github.com/Guilder23" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -186,18 +301,18 @@
           <h4>Contacto</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Cochabamba, Bolivia</li>
-            <li><i class="fas fa-envelope"></i> contacto@appyaa.com</li>
-            <li><i class="fas fa-envelope"></i> tuappyasoft@gmail.com</li>
-            <li><i class="fab fa-whatsapp"></i> +591 68440201</li>
-            <li><i class="fab fa-whatsapp"></i> +591 77910962</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@appyaa.com">contacto@appyaa.com</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:tuappyasoft@gmail.com">tuappyasoft@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59168440201" target="_blank">+591 68440201</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59177910962" target="_blank">+591 77910962</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 AppYaa. Todos los derechos reservados.</p>
-        <p class="muted small">Desarrollado con <i class="fas fa-heart"></i> por AppYaa</p>
-        <a href="#nosotros" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <p>© 2026 AppYaaSoft. Todos los derechos reservados.</p>
+        <p class="muted small">Desarrollado por AppYaa</p>
+        <a href="#nosotros" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
       </div>
     </footer>
   </main>

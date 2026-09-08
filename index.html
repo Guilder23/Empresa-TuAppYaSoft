@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" href="assets/ALogoEmpresa.png">
 </head>
 
-<body class="dark home-hero-behind-header">
+<body class="dark">
   <header class="site-header">
     <div class="brand">
       <div class="logo">
@@ -22,7 +22,7 @@
       </div>
       <div class="who">
         <h1>AppYaa</h1>
-        <p class="muted">Desarrollo de Software Profesional</p>
+        <p class="muted">Desarrollo de Software</p>
       </div>
     </div>
 
@@ -35,27 +35,22 @@
       <a href="pages/nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
       <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
-      <!-- Theme Toggle Button -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </button>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <main class="container">
     <!-- Hero Section -->
     <section class="hero hero-full-image animate-on-scroll" id="inicio">
-      <div class="hero-overlay-image card-3d">
-        <img src="assets/aindex/imgencima.png" alt="Vista previa de proyecto tecnológico">
-      </div>
       <div class="hero-left card-3d">
-        <!-- <div class="hero-badge">
-          <i class="fas fa-award"></i> Soluciones Digitales de Calidad
-        </div> -->
-        <h2 class="hero-title"><span id="typingPrefix" class="typing-prefix" data-prefix="Transforma Tu Negocio Con"></span> <span class="accent gradient-text typing-text" id="typingText" data-words="AppYaa,Software Profesional,Páginas Web Modernas,Sistemas a Medida">AppYaa</span></h2>
+        <h2 class="hero-title"><span id="typingPrefix" class="typing-prefix" data-prefix="Transforma Tu Negocio Con"></span> <span class="accent gradient-text typing-text" id="typingText" data-words="Sistemas a Medida,Software Profesional,Páginas Web Modernas,AppYaa">Sistemas a Medida</span></h2>
         <p class="lead">Desarrollamos páginas web y aplicaciones a medida para impulsar tu negocio. Desde sitios web estáticos hasta plataformas dinámicas complejas, e-commerce y sistemas personalizados. <strong>Calidad profesional a precios accesibles.</strong></p>
         
         <div class="hero-features">
@@ -107,114 +102,270 @@
         </div>
       </div>
 
+      <div class="hero-overlay-image-wrapper">
+        <div class="hero-backdrop-glow"></div>
+        
+        <!-- Floating badge top right -->
+        <div class="hero-float-badge badge-top-right">
+          <div class="badge-icon-box"><i class="fas fa-crown"></i></div>
+          <div class="badge-info-box">
+            <strong>Patrimonio Digital</strong>
+            <span>Software Limpio & Seguro</span>
+          </div>
+        </div>
+
+        <div class="hero-overlay-image card-3d">
+          <img src="assets/aindex/imgencima.png" alt="Vista previa de proyecto tecnológico">
+        </div>
+
+        <!-- Floating badge bottom left -->
+        <div class="hero-float-badge badge-bottom-left">
+          <div class="badge-icon-box users-icon"><i class="fas fa-users"></i></div>
+          <div class="badge-info-box">
+            <strong>Comunidad Activa</strong>
+            <span>+50 Clientes Satisfechos</span>
+          </div>
+        </div>
+
+        <!-- Floating circular badge -->
+        <div class="hero-circle-badge">
+          <span class="badge-num">100%</span>
+          <span class="badge-lbl">CALIDAD</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Cinta Infinita en Movimiento Continuo (Infinite Marquee Ribbon) -->
+    <div class="infinite-marquee-ribbon">
+      <div class="marquee-inner">
+        <div class="marquee-content">
+          <span class="m-item"><i class="fas fa-star"></i> DESARROLLO WEB</span>
+          <span class="m-item"><i class="fas fa-mobile-alt"></i> APPS MÓVILES</span>
+          <span class="m-item"><i class="fas fa-layer-group"></i> SISTEMAS A MEDIDA</span>
+          <span class="m-item"><i class="fab fa-python"></i> DJANGO & PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT & VUE</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL & PHP</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL & MYSQL</span>
+          <span class="m-item"><i class="fas fa-cloud"></i> CLOUD & CI/CD</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> SEGURIDAD WEB</span>
+          <span class="m-item"><i class="fas fa-bolt"></i> ALTO RENDIMIENTO</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="m-item"><i class="fas fa-star"></i> DESARROLLO WEB</span>
+          <span class="m-item"><i class="fas fa-mobile-alt"></i> APPS MÓVILES</span>
+          <span class="m-item"><i class="fas fa-layer-group"></i> SISTEMAS A MEDIDA</span>
+          <span class="m-item"><i class="fab fa-python"></i> DJANGO & PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT & VUE</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL & PHP</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL & MYSQL</span>
+          <span class="m-item"><i class="fas fa-cloud"></i> CLOUD & CI/CD</span>
+          <span class="m-item"><i class="fas fa-shield-alt"></i> SEGURIDAD WEB</span>
+          <span class="m-item"><i class="fas fa-bolt"></i> ALTO RENDIMIENTO</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section (Interactive Carousel) -->
     <section id="servicios" class="section services animate-on-scroll">
       <div class="section-header">
         <h2><i class="fas fa-briefcase"></i> Nuestros Servicios</h2>
         <p class="section-subtitle">Soluciones completas para cada tipo de negocio</p>
       </div>
 
-      <div class="services-grid">
-        <article class="service-card card-3d" data-tilt>
-          <div class="service-icon">
-            <i class="fas fa-file-code"></i>
-          </div>
-          <h3>Páginas Web Estáticas</h3>
-          <p>Sitios web rápidos y elegantes perfectos para presentar tu negocio, portafolios, landing pages y más.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Diseño personalizado</li>
-            <li><i class="fas fa-check"></i> Totalmente responsive</li>
-            <li><i class="fas fa-check"></i> Optimizado para SEO</li>
-            <li><i class="fas fa-check"></i> Carga ultra rápida</li>
-            <li><i class="fas fa-check"></i> Hosting incluido</li>
-          </ul>
-          <div class="service-price">Desde <span>$150</span></div>
-        </article>
+      <div class="services-carousel-wrapper">
+        <button class="carousel-arrow prev" id="servicesPrev" aria-label="Servicio anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
 
-        <article class="service-card card-3d featured" data-tilt>
-          <div class="popular-badge">
-            <i class="fas fa-fire"></i> Más Popular
-          </div>
-          <div class="service-icon">
-            <i class="fas fa-globe"></i>
-          </div>
-          <h3>Páginas Web Dinámicas</h3>
-          <p>Aplicaciones web completas con bases de datos, paneles de administración y funcionalidades avanzadas.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Base de datos integrada</li>
-            <li><i class="fas fa-check"></i> Panel de administración</li>
-            <li><i class="fas fa-check"></i> Sistema de usuarios</li>
-            <li><i class="fas fa-check"></i> API REST</li>
-            <li><i class="fas fa-check"></i> Actualizaciones en tiempo real</li>
-          </ul>
-          <div class="service-price">Desde <span>$500</span></div>
-        </article>
+        <div class="services-carousel-track-container" id="servicesTrackContainer">
+          <div class="services-carousel-track" id="servicesTrack">
+            <!-- Servicio 1 -->
+            <article class="service-card card-3d" data-tilt>
+              <div class="service-icon">
+                <i class="fas fa-file-code"></i>
+              </div>
+              <h3>Páginas Web Estáticas</h3>
+              <p>Sitios web rápidos y elegantes perfectos para presentar tu negocio, portafolios, landing pages y más.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Diseño personalizado</li>
+                <li><i class="fas fa-check"></i> Totalmente responsive</li>
+                <li><i class="fas fa-check"></i> Optimizado para SEO</li>
+                <li><i class="fas fa-check"></i> Carga ultra rápida</li>
+                <li><i class="fas fa-check"></i> Hosting incluido</li>
+              </ul>
+              <div class="service-price">Desde <span>$150</span></div>
+            </article>
 
-        <article class="service-card card-3d" data-tilt>
-          <div class="service-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-          <h3>E-Commerce / Tiendas Online</h3>
-          <p>Plataformas de comercio electrónico completas con carrito, pagos en línea y gestión de inventario.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Catálogo de productos</li>
-            <li><i class="fas fa-check"></i> Carrito de compras</li>
-            <li><i class="fas fa-check"></i> Pasarela de pagos</li>
-            <li><i class="fas fa-check"></i> Gestión de inventario</li>
-            <li><i class="fas fa-check"></i> Informes y analíticas</li>
-          </ul>
-          <div class="service-price">Desde <span>$800</span></div>
-        </article>
+            <!-- Servicio 2 -->
+            <article class="service-card card-3d featured" data-tilt>
+              <div class="popular-badge">
+                <i class="fas fa-fire"></i> Más Popular
+              </div>
+              <div class="service-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3>Páginas Web Dinámicas</h3>
+              <p>Aplicaciones web completas con bases de datos, paneles de administración y funcionalidades avanzadas.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Base de datos integrada</li>
+                <li><i class="fas fa-check"></i> Panel de administración</li>
+                <li><i class="fas fa-check"></i> Sistema de usuarios</li>
+                <li><i class="fas fa-check"></i> API REST</li>
+                <li><i class="fas fa-check"></i> Actualizaciones en tiempo real</li>
+              </ul>
+              <div class="service-price">Desde <span>$500</span></div>
+            </article>
 
-        <article class="service-card card-3d" data-tilt>
-          <div class="service-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Aplicaciones Móviles</h3>
-          <p>Apps nativas y multiplataforma para iOS y Android que llevarán tu negocio al siguiente nivel.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> iOS y Android</li>
-            <li><i class="fas fa-check"></i> Diseño nativo</li>
-            <li><i class="fas fa-check"></i> Notificaciones push</li>
-            <li><i class="fas fa-check"></i> Integración API</li>
-            <li><i class="fas fa-check"></i> Modo offline</li>
-          </ul>
-          <div class="service-price">Desde <span>$1,200</span></div>
-        </article>
+            <!-- Servicio 3 -->
+            <article class="service-card card-3d" data-tilt>
+              <div class="service-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <h3>E-Commerce / Tiendas Online</h3>
+              <p>Plataformas de comercio electrónico completas con carrito, pagos en línea y gestión de inventario.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Catálogo de productos</li>
+                <li><i class="fas fa-check"></i> Carrito de compras</li>
+                <li><i class="fas fa-check"></i> Pasarela de pagos</li>
+                <li><i class="fas fa-check"></i> Gestión de inventario</li>
+                <li><i class="fas fa-check"></i> Informes y analíticas</li>
+              </ul>
+              <div class="service-price">Desde <span>$800</span></div>
+            </article>
 
-        <article class="service-card card-3d" data-tilt>
-          <div class="service-icon">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <h3>Sistemas a Medida</h3>
-          <p>Desarrollo de software personalizado para automatizar y optimizar los procesos de tu empresa.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Análisis de requerimientos</li>
-            <li><i class="fas fa-check"></i> Desarrollo personalizado</li>
-            <li><i class="fas fa-check"></i> Integración con sistemas existentes</li>
-            <li><i class="fas fa-check"></i> Capacitación incluida</li>
-            <li><i class="fas fa-check"></i> Soporte continuo</li>
-          </ul>
-          <div class="service-price">Desde <span>$1,500</span></div>
-        </article>
+            <!-- Servicio 4 -->
+            <article class="service-card card-3d" data-tilt>
+              <div class="service-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Aplicaciones Móviles</h3>
+              <p>Apps nativas y multiplataforma para iOS y Android que llevarán tu negocio al siguiente nivel.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> iOS y Android</li>
+                <li><i class="fas fa-check"></i> Diseño nativo</li>
+                <li><i class="fas fa-check"></i> Notificaciones push</li>
+                <li><i class="fas fa-check"></i> Integración API</li>
+                <li><i class="fas fa-check"></i> Modo offline</li>
+              </ul>
+              <div class="service-price">Desde <span>$1,200</span></div>
+            </article>
 
-        <article class="service-card card-3d" data-tilt>
-          <div class="service-icon">
-            <i class="fas fa-paint-brush"></i>
+            <!-- Servicio 5 -->
+            <article class="service-card card-3d" data-tilt>
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>Sistemas a Medida</h3>
+              <p>Desarrollo de software personalizado para automatizar y optimizar los procesos de tu empresa.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Análisis de requerimientos</li>
+                <li><i class="fas fa-check"></i> Desarrollo personalizado</li>
+                <li><i class="fas fa-check"></i> Integración con sistemas existentes</li>
+                <li><i class="fas fa-check"></i> Capacitación incluida</li>
+                <li><i class="fas fa-check"></i> Soporte continuo</li>
+              </ul>
+              <div class="service-price">Desde <span>$1,500</span></div>
+            </article>
+
+            <!-- Servicio 6 -->
+            <article class="service-card card-3d" data-tilt>
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Diseño UX/UI</h3>
+              <p>Diseños modernos y atractivos centrados en la experiencia del usuario para maximizar conversiones.</p>
+              <ul class="service-features">
+                <li><i class="fas fa-check"></i> Prototipado interactivo</li>
+                <li><i class="fas fa-check"></i> Diseño de interfaz</li>
+                <li><i class="fas fa-check"></i> Identidad visual</li>
+                <li><i class="fas fa-check"></i> Testing de usabilidad</li>
+                <li><i class="fas fa-check"></i> Guía de estilo</li>
+              </ul>
+              <div class="service-price">Desde <span>$300</span></div>
+            </article>
           </div>
-          <h3>Diseño UX/UI</h3>
-          <p>Diseños modernos y atractivos centrados en la experiencia del usuario para maximizar conversiones.</p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Prototipado interactivo</li>
-            <li><i class="fas fa-check"></i> Diseño de interfaz</li>
-            <li><i class="fas fa-check"></i> Identidad visual</li>
-            <li><i class="fas fa-check"></i> Testing de usabilidad</li>
-            <li><i class="fas fa-check"></i> Guía de estilo</li>
-          </ul>
-          <div class="service-price">Desde <span>$300</span></div>
-        </article>
+        </div>
+
+        <button class="carousel-arrow next" id="servicesNext" aria-label="Siguiente servicio">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots" id="servicesDots"></div>
+    </section>
+
+    <!-- Modern Essence Geometric Section (Divs & Figuras Modernas) -->
+    <section class="section modern-essence-section animate-on-scroll">
+      <div class="essence-grid">
+        <!-- Geometric Visual Composition (Left) -->
+        <div class="geo-composition-wrapper">
+          <div class="geo-circle-backdrop"></div>
+
+          <!-- Main Vertical Card -->
+          <div class="geo-card-main">
+            <div class="geo-card-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <h3>Pasión por el Software</h3>
+            <p>Desarrollamos soluciones tecnológicas que trascienden: plataformas digitales robustas, veloces y diseñadas para el éxito de tu empresa.</p>
+          </div>
+
+          <!-- Overlapping Square Badge -->
+          <div class="geo-badge-square">
+            <div class="geo-square-icon"><i class="fas fa-award"></i></div>
+            <strong>Excelencia</strong>
+            <span>Gestión & Calidad</span>
+          </div>
+
+          <!-- Overlapping Circle Badge -->
+          <div class="geo-badge-circle">
+            <strong>100%</strong>
+            <span>CALIDAD</span>
+          </div>
+        </div>
+
+        <!-- Essence Content & 2x2 Grid (Right) -->
+        <div class="essence-content">
+          <span class="essence-tag">— NUESTRA ESENCIA</span>
+          <h2>Más que desarrollo de software, tu <span class="gradient-text">socio estratégico digital</span></h2>
+          <p class="essence-desc">En AppYaaSoft fusionamos creatividad, código limpio e ingeniería de vanguardia para convertir tus ideas en productos tecnológicos reales y de alto rendimiento.</p>
+
+          <div class="essence-pillars-grid">
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-bullseye"></i></div>
+              <div>
+                <h4>Misión Clara</h4>
+                <p>Construir software ágil y escalable que impulse el crecimiento de negocios y startups.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-eye"></i></div>
+              <div>
+                <h4>Visión Innovadora</h4>
+                <p>Ser el estándar de excelencia tecnológica reconocido por su fiabilidad y calidad.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4>Garantía de Código</h4>
+                <p>Buenas prácticas, seguridad de datos, pruebas continuas y arquitectura moderna.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+              <div>
+                <h4>Alianzas & Soporte</h4>
+                <p>Acompañamiento continuo, mantenimiento evolutivo y asesoría personalizada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -547,7 +698,8 @@
           <h4>Empresa</h4>
           <ul>
             <li><a href="pages/nosotros.html">Sobre Nosotros</a></li>
-            <li><a href="#proyectos">Portafolio</a></li>
+            <li><a href="pages/projects.html">Portafolio</a></li>
+            <li><a href="pages/tecnologias.html">Tecnologías</a></li>
             <li><a href="#precios">Precios</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
@@ -557,18 +709,18 @@
           <h4>Contacto</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Cochabamba, Bolivia</li>
-            <li><i class="fas fa-envelope"></i> contacto@appyaa.com</li>
-            <li><i class="fas fa-envelope"></i> tuappyasoft@gmail.com</li>
-            <li><i class="fab fa-whatsapp"></i> +591 68440201</li>
-            <li><i class="fab fa-whatsapp"></i> +591 77910962</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@appyaa.com">contacto@appyaa.com</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:tuappyasoft@gmail.com">tuappyasoft@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59168440201" target="_blank">+591 68440201</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59177910962" target="_blank">+591 77910962</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p> 2026 AppYaa. Todos los derechos reservados.</p>
-        <p class="muted small">Desarrollado con <i class="fas fa-heart"></i> por AppYaa</p>
-        <a href="#inicio" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <p>© 2026 AppYaaSoft. Todos los derechos reservados.</p>
+        <p class="muted small">Desarrollado por AppYaa</p>
+        <a href="#inicio" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
       </div>
     </footer>
   </main>

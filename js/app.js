@@ -84,39 +84,71 @@
     }
   }
 
-  // ==================== MOBILE MENU TOGGLE ====================
+  // ==================== MOBILE SIDEBAR DRAWER NAVIGATION ====================
   const mobileMenuToggle = document.getElementById('mobileMenuToggle');
   const nav = document.querySelector('.nav');
   
-  // Función para cerrar el menú
-  const closeNav = () => {
-    if (nav && nav.classList.contains('active')) {
-      nav.classList.remove('active');
+  // Create or select backdrop overlay
+  let navBackdrop = document.querySelector('.nav-backdrop');
+  if (!navBackdrop) {
+    navBackdrop = document.createElement('div');
+    navBackdrop.className = 'nav-backdrop';
+    document.body.appendChild(navBackdrop);
+  }
+
+  const openSidebar = () => {
+    if (!nav) return;
+    nav.classList.add('active');
+    navBackdrop.classList.add('active');
+    document.body.classList.add('nav-open');
+    if (mobileMenuToggle) {
       const icon = mobileMenuToggle.querySelector('i');
-      icon.classList.remove('fa-times');
-      icon.classList.add('fa-bars');
-    }
-  };
-  
-  if (mobileMenuToggle && nav) {
-    mobileMenuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      const icon = mobileMenuToggle.querySelector('i');
-      if (nav.classList.contains('active')) {
+      if (icon) {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-times');
-      } else {
+      }
+    }
+  };
+
+  const closeSidebar = () => {
+    if (!nav) return;
+    nav.classList.remove('active');
+    navBackdrop.classList.remove('active');
+    document.body.classList.remove('nav-open');
+    if (mobileMenuToggle) {
+      const icon = mobileMenuToggle.querySelector('i');
+      if (icon) {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
       }
+    }
+  };
+
+  if (mobileMenuToggle && nav) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (nav.classList.contains('active')) {
+        closeSidebar();
+      } else {
+        openSidebar();
+      }
     });
-    
-    // Cerrar menú al hacer clic fuera
-    document.addEventListener('click', (e) => {
-      if (nav.classList.contains('active') && 
-          !nav.contains(e.target) && 
-          !mobileMenuToggle.contains(e.target)) {
-        closeNav();
+
+    navBackdrop.addEventListener('click', closeSidebar);
+
+    // Close when clicking any nav link
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          closeSidebar();
+        }
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        closeSidebar();
       }
     });
   }
@@ -446,11 +478,160 @@
     lastScroll = currentScroll;
   }, { passive: true });
 
-  // ==================== FLOATING ANIMATION ====================
-  const floatingCards = document.querySelectorAll('.floating-card');
-  floatingCards.forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.5}s`;
-  });
+  // ==================== 3D PERSPECTIVE SERVICES CAROUSEL CONTROLLER ====================
+  const initServicesCarousel = () => {
+    const trackContainer = document.getElementById('servicesTrackContainer');
+    const track = document.getElementById('servicesTrack');
+    const prevBtn = document.getElementById('servicesPrev');
+    const nextBtn = document.getElementById('servicesNext');
+    const dotsContainer = document.getElementById('servicesDots');
+
+    if (!trackContainer || !track) return;
+
+    const cards = Array.from(track.querySelectorAll('.service-card'));
+    if (!cards.length) return;
+
+    // Create pagination dots
+    if (dotsContainer) {
+      dotsContainer.innerHTML = '';
+      cards.forEach((_, idx) => {
+        const dot = document.createElement('button');
+        dot.className = `carousel-dot ${idx === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ir al servicio ${idx + 1}`);
+        dot.addEventListener('click', () => {
+          scrollToCard(idx);
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    const scrollToCard = (index) => {
+      const card = cards[index];
+      if (!card) return;
+      const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+      const targetScroll = cardCenter - (trackContainer.clientWidth / 2);
+      trackContainer.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    };
+
+    const update3DCardPositions = () => {
+      const containerCenter = trackContainer.scrollLeft + (trackContainer.clientWidth / 2);
+      let closestCard = null;
+      let closestDist = Infinity;
+      let closestIdx = 0;
+
+      cards.forEach((card, idx) => {
+        const cardCenter = card.offsetLeft + (card.offsetWidth / 2);
+        const dist = Math.abs(containerCenter - cardCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestCard = card;
+          closestIdx = idx;
+        }
+      });
+
+      cards.forEach((card, idx) => {
+        card.classList.remove('card-left', 'card-center', 'card-right');
+        if (idx === closestIdx) {
+          card.classList.add('card-center');
+        } else if (idx < closestIdx) {
+          card.classList.add('card-left');
+        } else {
+          card.classList.add('card-right');
+        }
+      });
+
+      // Update dots
+      if (dotsContainer) {
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === closestIdx);
+        });
+      }
+
+      return closestIdx;
+    };
+
+    // Card click to center
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', () => {
+        scrollToCard(idx);
+        resetAutoPlay();
+      });
+    });
+
+    // Button controls
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const currentIdx = update3DCardPositions();
+        const prevIdx = (currentIdx - 1 + cards.length) % cards.length;
+        scrollToCard(prevIdx);
+        resetAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const currentIdx = update3DCardPositions();
+        const nextIdx = (currentIdx + 1) % cards.length;
+        scrollToCard(nextIdx);
+        resetAutoPlay();
+      });
+    }
+
+    // Scroll listener for 3D perspective update
+    let scrollTimeout = null;
+    trackContainer.addEventListener('scroll', () => {
+      if (scrollTimeout) cancelAnimationFrame(scrollTimeout);
+      scrollTimeout = requestAnimationFrame(update3DCardPositions);
+    }, { passive: true });
+
+    // Auto Play rotation
+    let autoPlayTimer = null;
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(() => {
+        const currentIdx = update3DCardPositions();
+        const nextIdx = (currentIdx + 1) % cards.length;
+        scrollToCard(nextIdx);
+      }, 4500);
+    };
+
+    const stopAutoPlay = () => {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    };
+
+    const resetAutoPlay = () => {
+      stopAutoPlay();
+      startAutoPlay();
+    };
+
+    // Pause on hover / touch
+    trackContainer.addEventListener('mouseenter', stopAutoPlay);
+    trackContainer.addEventListener('mouseleave', startAutoPlay);
+    trackContainer.addEventListener('touchstart', stopAutoPlay, { passive: true });
+    trackContainer.addEventListener('touchend', startAutoPlay, { passive: true });
+
+    // Initial positioning: Center card 1 ("Páginas Web Dinámicas") with Card 0 (left tilt) and Card 2 (right tilt)
+    setTimeout(() => {
+      scrollToCard(1);
+      update3DCardPositions();
+      startAutoPlay();
+    }, 150);
+
+    window.addEventListener('resize', () => {
+      update3DCardPositions();
+    });
+  };
+
+  initServicesCarousel();
 
   // ==================== INITIALIZE ====================
   console.log('✅ TuAppYaSoft - Website loaded successfully!');

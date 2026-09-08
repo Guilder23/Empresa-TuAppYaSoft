@@ -4,188 +4,283 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tecnologías — AppYaa</title>
-  <meta name="description" content="Tecnologías y habilidades — AppYaa" />
+  <title>Tecnologías y Stack — AppYaaSoft</title>
+  <meta name="description" content="Conoce nuestro stack tecnológico: React, Django, Python, Flutter, Node.js, Laravel, PostgreSQL y herramientas cloud." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/tecnologias.css">
+  <link rel="stylesheet" href="../css/chatbot.css">
+  <link rel="stylesheet" href="../css/cursor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../assets/ALogoEmpresa.png">
 </head>
 
 <body class="dark">
   <header class="site-header">
-    <div class="brand">
+    <a href="../index.html#inicio" class="brand" aria-label="Ir al inicio">
       <div class="logo">
-        <a href="../index.html#inicio" aria-label="Ir al inicio"><img src="../assets/ALogoEmpresa.png" alt="Logo AppYaa" style="height: 48px; width: auto;"></a>
+        <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
       </div>
       <div class="who">
         <h1>AppYaa</h1>
-        <p class="muted">Desarrollo de Software Profesional</p>
+        <p class="muted">Desarrollo Profesional</p>
       </div>
-    </div>
+    </a>
 
     <nav class="nav">
       <a href="../index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
       <a href="../index.html#servicios"><i class="fas fa-briefcase"></i> Servicios</a>
       <a href="../index.html#precios"><i class="fas fa-tags"></i> Precios</a>
       <a href="projects.html"><i class="fas fa-laptop-code"></i> Portafolio</a>
-      <a href="tecnologias.html"><i class="fas fa-tools"></i> Tecnologías</a>
-      <a href="../index.html#nosotros"><i class="fas fa-users"></i> Nosotros</a>
+      <a href="tecnologias.html" class="active"><i class="fas fa-tools"></i> Tecnologías</a>
+      <a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
       <a href="../index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
-      <!-- Theme Toggle Button -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </button>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <main class="container tech-page">
-    <section class="section" id="tecnologias">
-      <div class="section-header">
-        <h2><i class="fas fa-tools"></i> Tecnologías que Dominamos</h2>
+    <section class="tech-hero" id="tecnologias">
+      <div class="tech-hero-text">
+        <h2><i class="fas fa-tools"></i> Stack Tecnológico</h2>
+        <p>Utilizamos tecnologías modernas, robustas y de alto rendimiento para garantizar aplicaciones web veloces, sistemas escalables y aplicaciones móviles fluidas.</p>
       </div>
-
-      <div class="tech-images-grid">
-        <article class="tech-image-card card-3d">
-          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80" alt="Código fuente en pantalla de desarrollo">
-          <p>Programación moderna orientada a resultados</p>
-        </article>
-        <article class="tech-image-card card-3d">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Estación de trabajo para desarrollo web">
-          <p>Desarrollo web profesional y optimizado</p>
-        </article>
-        <article class="tech-image-card card-3d">
-          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80" alt="Aplicación en proceso de programación">
-          <p>Aplicaciones y sistemas a medida</p>
-        </article>
-      </div>
-
-      <div class="tech-logos">
-        <div class="tech-item"><i class="fab fa-html5"></i> HTML5</div>
-        <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-        <div class="tech-item"><i class="fab fa-js"></i> JavaScript</div>
-        <div class="tech-item"><i class="fab fa-react"></i> React</div>
-        <div class="tech-item"><i class="fab fa-node-js"></i> Node.js</div>
-        <div class="tech-item"><i class="fab fa-python"></i> Python</div>
-        <div class="tech-item"><i class="fab fa-laravel"></i> Laravel</div>
-        <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
-        <div class="tech-item"><i class="fab fa-flutter"></i> Flutter</div>
-        <div class="tech-item"><i class="fas fa-database"></i> MySQL</div>
-        <div class="tech-item"><i class="fas fa-database"></i> PostgreSQL</div>
-        <div class="tech-item"><i class="fas fa-database"></i> MongoDB</div>
-        <div class="tech-item"><i class="fas fa-fire"></i> Firebase</div>
-        <div class="tech-item"><i class="fas fa-diagram-project"></i> n8n</div>
+      <div class="tech-hero-image">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80" alt="Código y arquitectura de software moderno">
       </div>
     </section>
 
-    <section id="habilidades" class="section">
-      <div class="section-header">
-        <h2>Habilidades</h2>
+    <!-- Cinta Infinita de Tecnologías -->
+    <div class="infinite-marquee-ribbon" style="margin-bottom: 24px;">
+      <div class="marquee-inner">
+        <div class="marquee-content">
+          <span class="m-item"><i class="fab fa-python"></i> PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL</span>
+          <span class="m-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL</span>
+          <span class="m-item"><i class="fab fa-google"></i> FLUTTER</span>
+          <span class="m-item"><i class="fab fa-docker"></i> DOCKER & CI/CD</span>
+          <span class="m-item"><i class="fab fa-node-js"></i> NODE.JS</span>
+          <span class="m-item"><i class="fab fa-python"></i> PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL</span>
+          <span class="m-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL</span>
+          <span class="m-item"><i class="fab fa-google"></i> FLUTTER</span>
+          <span class="m-item"><i class="fab fa-docker"></i> DOCKER & CI/CD</span>
+          <span class="m-item"><i class="fab fa-node-js"></i> NODE.JS</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="m-item"><i class="fab fa-python"></i> PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL</span>
+          <span class="m-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL</span>
+          <span class="m-item"><i class="fab fa-google"></i> FLUTTER</span>
+          <span class="m-item"><i class="fab fa-docker"></i> DOCKER & CI/CD</span>
+          <span class="m-item"><i class="fab fa-node-js"></i> NODE.JS</span>
+          <span class="m-item"><i class="fab fa-python"></i> PYTHON</span>
+          <span class="m-item"><i class="fab fa-react"></i> REACT</span>
+          <span class="m-item"><i class="fab fa-laravel"></i> LARAVEL</span>
+          <span class="m-item"><i class="fab fa-js"></i> JAVASCRIPT</span>
+          <span class="m-item"><i class="fas fa-database"></i> POSTGRESQL</span>
+          <span class="m-item"><i class="fab fa-google"></i> FLUTTER</span>
+          <span class="m-item"><i class="fab fa-docker"></i> DOCKER & CI/CD</span>
+          <span class="m-item"><i class="fab fa-node-js"></i> NODE.JS</span>
+        </div>
       </div>
+    </div>
 
-      <div class="skills-cards">
-        <div class="skill-card card-3d" data-tilt>
-          <div class="skill-icon">
-            <i class="fas fa-code"></i>
+    <!-- Composición Geométrica Moderna (Arquitectura & Calidad) -->
+    <section class="section modern-essence-section" style="padding-top: 0; margin-bottom: 24px;">
+      <div class="essence-grid">
+        <!-- Visual Geometric Composition (Left) -->
+        <div class="geo-composition-wrapper">
+          <div class="geo-circle-backdrop"></div>
+
+          <div class="geo-card-main">
+            <div class="geo-card-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3>Arquitectura Robusta</h3>
+            <p>Implementamos patrones de diseño probados en la industria, microservicios y bases de datos relacionales preparadas para soportar alto tráfico.</p>
           </div>
-          <h3>Frontend</h3>
-        </div>
 
-        <div class="skill-card card-3d" data-tilt>
-          <div class="skill-icon">
-            <i class="fas fa-server"></i>
+          <div class="geo-badge-square">
+            <div class="geo-square-icon"><i class="fas fa-shield-alt"></i></div>
+            <strong>Seguridad</strong>
+            <span>Cifrado & Pruebas</span>
           </div>
-          <h3>Backend</h3>
-        </div>
 
-        <div class="skill-card card-3d" data-tilt>
-          <div class="skill-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h3>Mobile</h3>
-        </div>
-
-        <div class="skill-card card-3d" data-tilt>
-          <div class="skill-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3>Databases</h3>
-        </div>
-      </div>
-
-      <div class="skills-container">
-        <div class="skills-category">
-          <h3> Lenguajes de Programación</h3>
-          <div class="skills-grid">
-            <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-            <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-            <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
-            <div class="skill"><i class="fab fa-python"></i> Python</div>
-            <div class="skill"><i class="fab fa-dart"></i> Dart</div>
-            <div class="skill"><i class="fab fa-php"></i> PHP</div>
-            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
-            <div class="skill"><i class="fab fa-java"></i> Java</div>
+          <div class="geo-badge-circle">
+            <strong>99.9%</strong>
+            <span>UPTIME</span>
           </div>
         </div>
 
-        <div class="skills-category">
-          <h3> Frameworks</h3>
-          <div class="skills-grid">
-            <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-            <div class="skill"><i class="fab fa-react"></i> React</div>
-            <div class="skill"><i class="fab fa-node-js"></i> Node / Express</div>
-            <div class="skill"><i class="fab fa-laravel"></i> Laravel</div>
-            <div class="skill"><i class="fab fa-python"></i> Django</div>
-            <div class="skill"><i class="fab fa-flutter"></i> Flutter</div>
-          </div>
-        </div>
+        <!-- Pillars 2x2 (Right) -->
+        <div class="essence-content">
+          <span class="essence-tag">— ENFOQUE TÉCNICO</span>
+          <h2>Herramientas modernas para <span class="gradient-text">soluciones escalables</span></h2>
+          <p class="essence-desc">Seleccionamos el stack tecnológico ideal para cada requerimiento, garantizando velocidad de carga, mantenibilidad a largo plazo y una experiencia de usuario impecable.</p>
 
-        <div class="skills-category">
-          <h3> Bases de datos</h3>
-          <div class="skills-grid">
-            <div class="skill"><i class="fas fa-database"></i> MySQL</div>
-            <div class="skill"><i class="fas fa-database"></i> PostgreSQL</div>
-            <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
-            <div class="skill"><i class="fas fa-fire"></i> Firebase</div>
-            <div class="skill"><i class="fas fa-database"></i> SQLite</div>
-          </div>
-        </div>
+          <div class="essence-pillars-grid">
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-bolt"></i></div>
+              <div>
+                <h4>Rendimiento Óptimo</h4>
+                <p>Carga ultrarrápida, optimización de assets y consultas SQL indexadas.</p>
+              </div>
+            </div>
 
-        <div class="skills-category">
-          <h3> Herramientas & DevOps</h3>
-          <div class="skills-grid">
-            <div class="skill"><i class="fab fa-trello"></i> Trello</div>
-            <div class="skill"><i class="fas fa-tasks"></i> Taiga</div>
-            <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
-            <div class="skill"><i class="fab fa-github"></i> GitHub</div>
-            <div class="skill"><i class="fas fa-terminal"></i> Terminal</div>
-            <div class="skill"><i class="fas fa-palette"></i> Figma</div>
-            <div class="skill"><i class="fas fa-cogs"></i> n8n</div>
-          </div>
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-lock"></i></div>
+              <div>
+                <h4>Ciberseguridad</h4>
+                <p>Protección contra vulnerabilidades OWASP, tokens JWT y cifrado SSL.</p>
+              </div>
+            </div>
 
-          <div class="skills-category">
-            <h3>Sistemas Operativos</h3>
-            <div class="skills-grid">
-              <div class="skill"><i class="fab fa-windows"></i> Windows</div>
-              <div class="skill"><i class="fab fa-linux"></i> Linux</div>
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-sync-alt"></i></div>
+              <div>
+                <h4>CI/CD & DevOps</h4>
+                <p>Despliegues automatizados, backups en la nube y monitoreo continuo.</p>
+              </div>
+            </div>
+
+            <div class="essence-pillar-item">
+              <div class="pillar-icon"><i class="fas fa-mobile-alt"></i></div>
+              <div>
+                <h4>Multiplataforma</h4>
+                <p>Interfaces que funcionan con fluidez en web, tablets y smartphones.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 4 Main Skill Pillars -->
+    <div class="skills-cards">
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3>Frontend</h3>
+        <p>Interfaces dinámicas, interactivas y 100% responsivas</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3>Backend & APIs</h3>
+        <p>Lógica de negocio sólida, segura y de alto tráfico</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile Apps</h3>
+        <p>Desarrollo nativo y multiplataforma iOS & Android</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Data & Cloud</h3>
+        <p>Bases de datos optimizadas y despliegues ágiles</p>
+      </div>
+    </div>
+
+    <!-- Detailed Skills Categories Grid -->
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3><i class="fas fa-laptop-code"></i> Lenguajes de Programación</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="skill"><i class="fab fa-python"></i> Python</div>
+          <div class="skill"><i class="fab fa-php"></i> PHP</div>
+          <div class="skill"><i class="fab fa-dart"></i> Dart</div>
+          <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="skill"><i class="fab fa-java"></i> Java</div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3><i class="fas fa-cubes"></i> Frameworks & Librerías</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fab fa-react"></i> React</div>
+          <div class="skill"><i class="fab fa-python"></i> Django</div>
+          <div class="skill"><i class="fab fa-laravel"></i> Laravel</div>
+          <div class="skill"><i class="fab fa-flutter"></i> Flutter</div>
+          <div class="skill"><i class="fab fa-node-js"></i> Express.js</div>
+          <div class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fas fa-database"></i> PostgreSQL</div>
+          <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+          <div class="skill"><i class="fas fa-leaf"></i> MongoDB</div>
+          <div class="skill"><i class="fas fa-fire"></i> Firebase</div>
+          <div class="skill"><i class="fas fa-database"></i> SQLite</div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3><i class="fas fa-cogs"></i> Herramientas & Automatización</h3>
+        <div class="skills-grid">
+          <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+          <div class="skill"><i class="fab fa-github"></i> GitHub</div>
+          <div class="skill"><i class="fas fa-project-diagram"></i> n8n</div>
+          <div class="skill"><i class="fab fa-figma"></i> Figma</div>
+          <div class="skill"><i class="fas fa-terminal"></i> Terminal / Linux</div>
+          <div class="skill"><i class="fab fa-docker"></i> Docker</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech visual cards -->
+    <div class="tech-images-grid">
+      <article class="tech-image-card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80" alt="Código moderno y estructurado">
+        <p><i class="fas fa-check-circle" style="color:var(--accent2); margin-right:4px;"></i> Programación moderna y escalable</p>
+      </article>
+      <article class="tech-image-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Desarrollo web optimizado">
+        <p><i class="fas fa-check-circle" style="color:var(--accent2); margin-right:4px;"></i> Desarrollo web veloz y SEO optimizado</p>
+      </article>
+      <article class="tech-image-card">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Sistemas a medida">
+        <p><i class="fas fa-check-circle" style="color:var(--accent2); margin-right:4px;"></i> Soluciones y sistemas a medida</p>
+      </article>
+    </div>
+
     <footer class="site-footer">
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="../assets/ALogoEmpresa.png" alt="Logo TuAppYaSoft" style="height: 48px; width: auto;">
+            <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
           </div>
-          <h3>TuApp<span class="highlight">YaSoft</span></h3>
+          <h3>AppYaa<span class="highlight">Soft</span></h3>
           <p class="muted">Desarrollo de software profesional para impulsar tu negocio al siguiente nivel.</p>
           <div class="footer-socials">
             <a href="https://github.com/Guilder23" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -208,7 +303,7 @@
         <div class="footer-section">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
             <li><a href="projects.html">Portafolio</a></li>
             <li><a href="tecnologias.html">Tecnologías</a></li>
             <li><a href="../index.html#precios">Precios</a></li>
@@ -220,18 +315,18 @@
           <h4>Contacto</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Cochabamba, Bolivia</li>
-            <li><i class="fas fa-envelope"></i> contacto@appyaa.com</li>
-            <li><i class="fas fa-envelope"></i> tuappyasoft@gmail.com</li>
-            <li><i class="fab fa-whatsapp"></i> +591 68440201</li>
-            <li><i class="fab fa-whatsapp"></i> +591 77910962</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@appyaa.com">contacto@appyaa.com</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:tuappyasoft@gmail.com">tuappyasoft@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59168440201" target="_blank">+591 68440201</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59177910962" target="_blank">+591 77910962</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 AppYaa. Todos los derechos reservados.</p>
-        <p class="muted small">Desarrollado con <i class="fas fa-heart"></i> por AppYaa</p>
-        <a href="#tecnologias" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <p>© 2026 AppYaaSoft. Todos los derechos reservados.</p>
+        <p class="muted small">Desarrollado por AppYaa</p>
+        <a href="#tecnologias" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
       </div>
     </footer>
   </main>

@@ -4,240 +4,265 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portafolio — AppYaa</title>
-  <meta name="description" content="Portafolio de proyectos — AppYaa" />
+  <title>Portafolio de Proyectos — AppYaaSoft</title>
+  <meta name="description" content="Explora nuestro portafolio de páginas web, sistemas administrativos, e-commerce y aplicaciones móviles desarrolladas por AppYaaSoft." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/projects.css">
+  <link rel="stylesheet" href="../css/chatbot.css">
+  <link rel="stylesheet" href="../css/cursor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../assets/ALogoEmpresa.png">
 </head>
 
 <body class="dark">
   <header class="site-header">
-    <div class="brand">
+    <a href="../index.html#inicio" class="brand" aria-label="Ir al inicio">
       <div class="logo">
-        <a href="../index.html#inicio" aria-label="Ir al inicio"><img src="../assets/ALogoEmpresa.png" alt="Logo AppYaa" style="height: 48px; width: auto;"></a>
+        <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
       </div>
       <div class="who">
         <h1>AppYaa</h1>
-        <p class="muted">Desarrollo de Software Profesional</p>
+        <p class="muted">Desarrollo Profesional</p>
       </div>
-    </div>
+    </a>
 
     <nav class="nav">
       <a href="../index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
       <a href="../index.html#servicios"><i class="fas fa-briefcase"></i> Servicios</a>
       <a href="../index.html#precios"><i class="fas fa-tags"></i> Precios</a>
-      <a href="projects.html"><i class="fas fa-laptop-code"></i> Portafolio</a>
+      <a href="projects.html" class="active"><i class="fas fa-laptop-code"></i> Portafolio</a>
       <a href="tecnologias.html"><i class="fas fa-tools"></i> Tecnologías</a>
-      <a href="../index.html#nosotros"><i class="fas fa-users"></i> Nosotros</a>
+      <a href="nosotros.html"><i class="fas fa-users"></i> Nosotros</a>
       <a href="../index.html#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
-      <!-- Theme Toggle Button -->
-  <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
-    <i class="fas fa-sun"></i>
-    <i class="fas fa-moon"></i>
-  </button>
-    <button class="mobile-menu-toggle" id="mobileMenuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
-  <main class="container">
-    <section class="projects-hero card-3d">
+  <main class="container projects-page">
+    <section class="projects-hero">
       <div class="projects-hero-text">
-        <h2><i class="fas fa-code"></i> Proyectos de Programación Web y Software</h2>
-        <p>Explora soluciones reales en desarrollo web, sistemas administrativos y aplicaciones móviles creadas por AppYaa.</p>
+        <h2><i class="fas fa-laptop-code"></i> Portafolio de Proyectos</h2>
+        <p>Soluciones reales desarrolladas para empresas y clientes: aplicaciones web full-stack, sistemas ERP/CRM, plataformas de comercio electrónico y aplicaciones móviles.</p>
       </div>
       <div class="projects-hero-image">
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="Entorno de trabajo de programación y tecnología">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=300&fit=crop" alt="Proyectos y Software">
       </div>
     </section>
 
-    <!-- Projects Section (moved from index) -->
-    <section id="proyectos" class="section">
-      <div class="section-header">
-        <h2><i class="fas fa-laptop-code"></i> Algunos Proyectos</h2>
+    <!-- Cinta Infinita de Especialidades -->
+    <div class="infinite-marquee-ribbon" style="margin-bottom: 24px;">
+      <div class="marquee-inner">
+        <div class="marquee-content">
+          <span class="m-item"><i class="fas fa-star"></i> SISTEMAS ERP</span>
+          <span class="m-item"><i class="fas fa-dumbbell"></i> SOFTWARE GIMNASIOS</span>
+          <span class="m-item"><i class="fas fa-hotel"></i> GESTIÓN HOTELERA</span>
+          <span class="m-item"><i class="fas fa-truck"></i> SISTEMA PREVENTA</span>
+          <span class="m-item"><i class="fas fa-hospital"></i> CITAS MÉDICAS</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-film"></i> APPS FLUTTER</span>
+          <span class="m-item"><i class="fas fa-star"></i> SISTEMAS ERP</span>
+          <span class="m-item"><i class="fas fa-dumbbell"></i> SOFTWARE GIMNASIOS</span>
+          <span class="m-item"><i class="fas fa-hotel"></i> GESTIÓN HOTELERA</span>
+          <span class="m-item"><i class="fas fa-truck"></i> SISTEMA PREVENTA</span>
+          <span class="m-item"><i class="fas fa-hospital"></i> CITAS MÉDICAS</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-film"></i> APPS FLUTTER</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span class="m-item"><i class="fas fa-star"></i> SISTEMAS ERP</span>
+          <span class="m-item"><i class="fas fa-dumbbell"></i> SOFTWARE GIMNASIOS</span>
+          <span class="m-item"><i class="fas fa-hotel"></i> GESTIÓN HOTELERA</span>
+          <span class="m-item"><i class="fas fa-truck"></i> SISTEMA PREVENTA</span>
+          <span class="m-item"><i class="fas fa-hospital"></i> CITAS MÉDICAS</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-film"></i> APPS FLUTTER</span>
+          <span class="m-item"><i class="fas fa-star"></i> SISTEMAS ERP</span>
+          <span class="m-item"><i class="fas fa-dumbbell"></i> SOFTWARE GIMNASIOS</span>
+          <span class="m-item"><i class="fas fa-hotel"></i> GESTIÓN HOTELERA</span>
+          <span class="m-item"><i class="fas fa-truck"></i> SISTEMA PREVENTA</span>
+          <span class="m-item"><i class="fas fa-hospital"></i> CITAS MÉDICAS</span>
+          <span class="m-item"><i class="fas fa-shopping-cart"></i> E-COMMERCE</span>
+          <span class="m-item"><i class="fas fa-film"></i> APPS FLUTTER</span>
+        </div>
+      </div>
+    </div>
+
+    <section id="proyectos" class="section" style="padding-top:0;">
+      <div class="projects-header-bar">
+        <h3><i class="fas fa-layer-group"></i> Galería de Proyectos</h3>
         <div class="filters">
           <button class="filter active" data-filter="all">Todos</button>
           <button class="filter" data-filter="web">Web</button>
           <button class="filter" data-filter="mobile">Mobile</button>
-          <button class="filter" data-filter="ecommerce">Ecommerce</button>
-          <button class="filter" data-filter="mvp">MVP</button>
+          <button class="filter" data-filter="ecommerce">E-Commerce</button>
+          <button class="filter" data-filter="mvp">Sistemas / MVP</button>
         </div>
       </div>
 
       <div id="projectsGrid" class="projects-grid">
-
-        
-        <article class="project card-3d" data-tags="mvp " data-title="Sistema GYM"
-          data-tech="Django,PostgreSQL,Python"
-          data-desc="Sistema  Gestión de clientes y membresías (pagos, vencimientos y recordatorios automáticos)
-                    ✔️ Control de asistencia (QR, código)
-                    ✔️ Rutinas personalizadas con seguimiento de progreso
-                    ✔️ Control de ventas e inventario (suplementos, bebidas, etc.)
-                    ✔️ Reservas de clases con cupos limitados
-                    ✔️ Reportes financieros en tiempo real
-                    ✔️ Paneles según rol (admin, recepcionista, entrenador, cliente)
-                    ✔️ Asistente virtual 24/7 para consultas."
+        <!-- Proyecto 1 -->
+        <article class="project" data-tags="mvp web" data-title="Sistema GYM & Membresías"
+          data-tech="Django, PostgreSQL, Python"
+          data-desc="Sistema integral de gestión de gimnasios: control de clientes, membresías con recordatorios automáticos, asistencia con QR, inventario de productos, reservas de clases y reportes financieros."
           data-images="../assets/gym1.png,../assets/gym2.png,../assets/gym3.png,../assets/gym4.png,../assets/gym5.png,../assets/gym6.png,../assets/gym7.png,../assets/gym8.png,../assets/gym9.png,../assets/gym10.png,../assets/gym11.png,../assets/gym12.png">
-
           <div class="p-thumb" style="background-image:url('../assets/gym1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema GYM</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i class="fab fa-python"></i>Python</p>
+            <h4><i class="fas fa-dumbbell"></i> Sistema GYM</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> PostgreSQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="mvp " data-title="Sistema Alojamiento/Hotel/Residencial"
-          data-tech="Django,PostgreSQL,Python"
-          data-desc="Sistema Alojamiento/Hotel/Residencial tiene gestiones de roles, usuarios,habitaciones,pagos, productos,reservas en linea,inventario productos,ventas,reportes etc..."
+        <!-- Proyecto 2 -->
+        <article class="project" data-tags="mvp web" data-title="Sistema Alojamiento & Hotel"
+          data-tech="Django, MySQL, Python"
+          data-desc="Plataforma de gestión para hoteles y residenciales: control de habitaciones, check-in/check-out, reservas en línea, facturación, reportes de ocupación y control de inventario."
           data-images="../assets/alojamiento1.png,../assets/alojamiento2.png,../assets/alojamiento3.png,../assets/alojamiento4.png,../assets/alojamiento5.png,../assets/alojamiento6.png,../assets/alojamiento7.png,../assets/alojamiento8.png">
-
           <div class="p-thumb" style="background-image:url('../assets/alojamiento1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema Alojamiento/Hotel/Residencial</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> MySQL • <i class="fab fa-php"></i>Python</p>
+            <h4><i class="fas fa-hotel"></i> Sistema Alojamiento / Hotel</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> MySQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="mvp " data-title="Sistema preventa"
-          data-tech="Django,PostgreSQL,Python"
-          data-desc="Sistema Preventa tiene gestiones de roles, usuarios, productos, pedidos,ventas, facturas,reportes, geolocalizacion etc..."
+        <!-- Proyecto 3 -->
+        <article class="project" data-tags="mvp web" data-title="Sistema Preventa & Rutas"
+          data-tech="Django, PostgreSQL, Python"
+          data-desc="Sistema de preventa para distribuidores y fuerza de ventas: pedidos en ruta, inventario en tiempo real, geolocalización de clientes y emisión de reportes comerciales."
           data-images="../assets/preventa1.png,../assets/preventa2.png,../assets/preventa3.png,../assets/preventa4.png,../assets/preventa5.png,../assets/preventa6.png,../assets/preventa7.png,../assets/preventa8.png">
-
           <div class="p-thumb" style="background-image:url('../assets/preventa1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema PREVENTA</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i class="fab fa-python"></i>Python</p>
+            <h4><i class="fas fa-truck-loading"></i> Sistema Preventa</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> PostgreSQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="mvp" data-title="Sisteme de citas y atencion hospitalario"
-          data-tech="Python, PostgreSQL" data-desc="Sistema de citas, gestion de pacientes,medicos, ecografos, atencion y reportes..."
+        <!-- Proyecto 4 -->
+        <article class="project" data-tags="mvp web" data-title="Sistema Hospitalario y Citas"
+          data-tech="Django, PostgreSQL, Python"
+          data-desc="Plataforma de citas médicas, administración de expedientes de pacientes, asignación de especialistas, gestión de ecografías y emisión de órdenes médicas."
           data-images="../assets/hospital1.png,../assets/hospital2.png,../assets/hospital3.png,../assets/hospital4.png,../assets/hospital5.png,../assets/hospital6.png,../assets/hospital7.png,../assets/hospital8.png">
-
           <div class="p-thumb" style="background-image:url('../assets/hospital1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema Hospital (Citas)</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i class="fab fa-python"></i>Python</p>
+            <h4><i class="fas fa-heartbeat"></i> Sistema Hospital (Citas)</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> PostgreSQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="mvp " data-title="Sistema de inscripciones"
-          data-tech="Laravel,php, MySQL"
-          data-desc="Sistema integral de inscripciones para olimpiadas OH-SANSI desarrollado en 2025..."
-          data-images="../assets/sansi1.png,../assets/sansi2.png,../assets/sansi3.png,../assets/sansi4.png,../assets/sansi8.png,../assets/sansi10.png,../assets/sansi7.png,../assets/sansi2.png">
-
+        <!-- Proyecto 5 -->
+        <article class="project" data-tags="mvp web" data-title="Sistema de Inscripción Olimpiadas"
+          data-tech="Laravel, PHP, MySQL"
+          data-desc="Sistema integral de inscripciones para olimpiadas OH-SANSI: registro de participantes por categorías, generación de credenciales con código QR y validación en tiempo real."
+          data-images="../assets/sansi1.png,../assets/sansi2.png,../assets/sansi3.png,../assets/sansi4.png,../assets/sansi8.png,../assets/sansi10.png,../assets/sansi7.png">
           <div class="p-thumb" style="background-image:url('../assets/sansi1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sitema de inscripcion Oh-SANSI</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Laravel • <i class="fas fa-database"></i> MySQL • <i class="fab fa-php"></i>PHP</p>
+            <h4><i class="fas fa-graduation-cap"></i> Sistema Inscripciones OH-SANSI</h4>
+            <p class="muted"><i class="fab fa-laravel"></i> Laravel • <i class="fas fa-database"></i> MySQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales educativos"
-          data-tech="Python, PostgreSQL" data-desc="Plataforma educativa integral de marketplace..."
+        <!-- Proyecto 6 -->
+        <article class="project" data-tags="web ecommerce" data-title="Ecommerce Materiales Educativos"
+          data-tech="Django, PostgreSQL, Python"
+          data-desc="Marketplace de venta de libros, guías y recursos académicos con carrito de compras, descargas digitales seguras y gestión de autores."
           data-images="../assets/biblioteca1.png,../assets/biblioteca2.png">
-
           <div class="p-thumb" style="background-image:url('../assets/biblioteca1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema de venta y compra de materiales educativos</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> PostgreSQL • <i class="fab fa-python"></i>Python</p>
+            <h4><i class="fas fa-book"></i> E-Commerce Educativo</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> PostgreSQL</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="web ecommerce" data-title="Ecommerce de materiales"
-          data-tech="django, SQLite" data-desc="E-commerce especializado en materiales de construcción..."
+        <!-- Proyecto 7 -->
+        <article class="project" data-tags="web ecommerce" data-title="Ecommerce Materiales de Construcción"
+          data-tech="Django, SQLite, Python"
+          data-desc="Plataforma de catálogo de productos de construcción, cotizador automatizado, cálculo de fletes y pagos integrados."
           data-images="../assets/construccion1.png,../assets/construccion2.png">
-
           <div class="p-thumb" style="background-image:url('../assets/construccion1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i>Sistema compra y venta de material de construccion</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> SQLite • Python</p>
+            <h4><i class="fas fa-tools"></i> E-Commerce Construcción</h4>
+            <p class="muted"><i class="fab fa-python"></i> Django • <i class="fas fa-database"></i> SQLite</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
 
-        <article class="project card-3d" data-tags="mobile flutter" data-title="App Flutter — Reserva de asientos"
+        <!-- Proyecto 8 -->
+        <article class="project" data-tags="mobile flutter" data-title="App Flutter — Reserva de Cine"
           data-tech="Flutter, Firebase, Dart"
-          data-desc="App Android completa para reservas de cine..."
+          data-desc="Aplicación móvil Android/iOS para reserva y selección visual de butacas de cine en tiempo real con pasarela de pagos integrada."
           data-images="../assets/cine1.png,../assets/cine2.png">
-
           <div class="p-thumb" style="background-image:url('../assets/cine1.png');" aria-hidden="true"></div>
           <div class="project-content">
-            <h4><i class="fas fa-mobile-alt"></i> App Flutter — Reserva de asientos CINE</h4>
-            <p class="muted"><i class="fab fa-flutter"></i> Flutter • <i class="fas fa-database"></i>Firebase • Dart</p>
+            <h4><i class="fas fa-film"></i> App Cine (Reserva de Asientos)</h4>
+            <p class="muted"><i class="fab fa-google"></i> Flutter • <i class="fas fa-fire"></i> Firebase</p>
             <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
+              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Ver Detalles</button>
             </div>
           </div>
         </article>
+      </div>
+    </section>
 
-        <!-- <article class="project card-3d" data-tags="web admin" data-title="Plataforma de asistencia"
-          data-tech="Laravel, MySQL"
-          data-desc="Sistema integral de control de asistencia y productividad..."
-          data-images="../assets/asistencia1.png,../assets/asistencia2.png">
-
-          <div class="p-thumb" style="background-image:url('../assets/asistencia1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-clipboard-check"></i> Plataforma de asistencia</h4>
-            <p class="muted"><i class="fab fa-laravel"></i> Django • <i class="fas fa-database"></i> MySQL</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-            </div>
-          </div>
-        </article> -->
-<!-- 
-        <article class="project card-3d" data-tags="web mvp realtime" data-title="Mini Red social"
-          data-tech="React, Django, Python, SQLite"
-          data-desc="Proyecto académico - Red social universitaria (MVP)..."
-          data-images="../assets/RedSocial1.png">
-
-          <div class="p-thumb" style="background-image:url('../assets/RedSocial1.png');" aria-hidden="true"></div>
-          <div class="project-content">
-            <h4><i class="fas fa-users"></i> Mini Red social</h4>
-            <p class="muted"><i class="fab fa-react"></i> React+Django • <i class="fas fa-fire"></i>SQLite • python</p>
-            <div class="p-actions">
-              <button class="btn small outline view-project"><i class="fas fa-info-circle"></i> Detalles</button>
-            </div>
-          </div>
-        </article>
-      </div>-->
-    </section> 
-
-    <!-- Optional: modal (same markup as in index) -->
+    <!-- Modal Interactivo de Detalles del Proyecto -->
     <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-      <div class="modal-content card-3d">
+      <div class="modal-content modal-project-detail">
         <button id="closeModal" class="modal-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
-        <h3 id="modalTitle"></h3>
-        <p id="modalTech" class="muted small"></p>
-        <p id="modalDescText"></p>
-        <div id="modalGallery" class="modal-gallery"></div>
+        
+        <div class="modal-header-info">
+          <h3 id="modalTitle"></h3>
+          <p id="modalTech" class="modal-tech-badge"></p>
+          <p id="modalDescText" class="modal-desc"></p>
+        </div>
+
+        <!-- Visor Principal Interactivo -->
+        <div class="modal-viewer-container">
+          <div class="modal-main-stage">
+            <button class="stage-nav-btn stage-prev" id="stagePrev" aria-label="Imagen anterior"><i class="fas fa-chevron-left"></i></button>
+            <div class="stage-image-wrapper">
+              <img id="stageMainImage" src="" alt="Captura del proyecto">
+            </div>
+            <button class="stage-nav-btn stage-next" id="stageNext" aria-label="Imagen siguiente"><i class="fas fa-chevron-right"></i></button>
+            <div class="stage-counter" id="stageCounter">1 / 1</div>
+          </div>
+
+          <!-- Tira de Miniaturas -->
+          <div class="modal-thumb-strip-wrapper">
+            <div id="modalThumbStrip" class="modal-thumb-strip"></div>
+          </div>
+        </div>
+
         <div class="modal-actions">
-          <a id="modalDemo" class="btn small" href="#" target="_blank" rel="noopener"></a>
-          <a id="modalRepo" class="btn small outline" href="#" target="_blank" rel="noopener"></a>
+          <a id="modalZoomFull" class="btn small outline" href="#" target="_blank" rel="noopener"><i class="fas fa-search-plus"></i> Ver Imagen Completa</a>
+          <a href="https://wa.me/59177910962?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20similar" target="_blank" class="btn small primary"><i class="fab fa-whatsapp"></i> Cotizar Sistema Similar</a>
         </div>
       </div>
     </div>
@@ -246,9 +271,9 @@
       <div class="footer-content">
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="../assets/ALogoEmpresa.png" alt="Logo TuAppYaSoft" style="height: 48px; width: auto;">
+            <img src="../assets/ALogoEmpresa.png" alt="Logo AppYaaSoft">
           </div>
-          <h3>TuApp<span class="highlight">YaSoft</span></h3>
+          <h3>AppYaa<span class="highlight">Soft</span></h3>
           <p class="muted">Desarrollo de software profesional para impulsar tu negocio al siguiente nivel.</p>
           <div class="footer-socials">
             <a href="https://github.com/Guilder23" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -271,8 +296,9 @@
         <div class="footer-section">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="../index.html#nosotros">Sobre Nosotros</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
             <li><a href="projects.html">Portafolio</a></li>
+            <li><a href="tecnologias.html">Tecnologías</a></li>
             <li><a href="../index.html#precios">Precios</a></li>
             <li><a href="../index.html#contacto">Contacto</a></li>
           </ul>
@@ -282,18 +308,18 @@
           <h4>Contacto</h4>
           <ul class="footer-contact">
             <li><i class="fas fa-map-marker-alt"></i> Cochabamba, Bolivia</li>
-            <li><i class="fas fa-envelope"></i> contacto@appyaa.com</li>
-            <li><i class="fas fa-envelope"></i> tuappyasoft@gmail.com</li>
-            <li><i class="fab fa-whatsapp"></i> +591 68440201</li>
-            <li><i class="fab fa-whatsapp"></i> +591 77910962</li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:contacto@appyaa.com">contacto@appyaa.com</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:tuappyasoft@gmail.com">tuappyasoft@gmail.com</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59168440201" target="_blank">+591 68440201</a></li>
+            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/59177910962" target="_blank">+591 77910962</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 AppYaa. Todos los derechos reservados.</p>
-        <p class="muted small">Desarrollado con <i class="fas fa-heart"></i> por AppYaa</p>
-        <a href="#inicio" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        <p>© 2026 AppYaaSoft. Todos los derechos reservados.</p>
+        <p class="muted small">Desarrollado por AppYaa</p>
+        <a href="#proyectos" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></a>
       </div>
     </footer>
   </main>
